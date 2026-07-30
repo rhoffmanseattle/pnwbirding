@@ -1,0 +1,173 @@
+---
+import Base from '../../layouts/Base.astro';
+import locations from '../../data/locations.json';
+
+export function getStaticPaths() {
+  return locations.map((l) => ({ params: { slug: l.slug }, props: { loc: l } }));
+}
+
+const { loc } = Astro.props;
+const seasonOrder = ['spring', 'summer', 'fall', 'winter'];
+const seasonLabels = { spring: 'Spring', summer: 'Summer', fall: 'Fall', winter: 'Winter' };
+---
+<Base title={loc.name} description={loc.snippet}>
+  <p class="crumb"><a href="/">← All locations</a></p>
+  <h1>{loc.name}</h1>
+  <p class="muted">{loc.region} · {loc.habitat}</p>
+
+  <p class="snippet">{loc.snippet}</p>
+
+  <div class="facts">
+    <div class="fact">
+      <h3>Effort</h3>
+      <p><strong>{loc.effort.rating}</strong></p>
+      <p>{loc.effort.distance}</p>
+      <p>{loc.effort.gain}</p>
+      <p class="muted">{loc.effort.terrain}</p>
+    </div>
+    <div class="fact">
+      <h3>When to go</h3>
+      <p>{loc.bestTime}</p>
+    </div>
+    <div class="fact">
+      <h3>Access</h3>
+      <p>{loc.pass}</p>
+      <p>
+        <a href={`https://www.google.com/maps/search/?api=1&query=${loc.lat},${loc.lng}`}>Directions</a>
+        · <a href={`https://ebird.org/hotspot/${loc.locId}`}>eBird hotspot</a>
+      </p>
+    </div>
+  </div>
+
+  <div id="minimap" data-lat={loc.lat} data-lng={loc.lng} data-name={loc.name}></div>
+
+  <h2>Birds by season</h2>
+  <p class="muted">Curated highlights. The current season is marked.</p>
+  <div class="seasons">
+    {seasonOrder.map((key) => (
+      <div class="season" data-season={key}>
+        <h3>{seasonLabels[key]} <span class="now-badge" hidden>now</span></h3>
+        <ul>
+          {loc.seasons[key].birds.map((b) => <li>{b}</li>)}
+        </ul>
+        <p class="muted note">{loc.seasons[key].note}</p>
+      </div>
+    ))}
+  </div>
+
+  <h2>Reported here in the last 30 days</h2>
+  <p class="muted">Live from eBird, so it reflects what people are actually seeing right now.</p>
+  <div id="recent" data-locid={loc.locId}>
+    <p class="muted">Loading recent sightings…</p>
+  </div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+    {loc.sources.map((s) => (
+      <li><a href={s.url} rel="noopener">{s.title}</a></li>
+    ))}
+  </ul>
+
+  <style>
+    .crumb { margin-bottom: 0; }
+    .snippet { font-size: 1.05rem; max-width: 46rem; }
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0.85rem;
+      margin: 1.25rem 0;
+    }
+    .fact {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.9rem 1rem;
+    }
+    .fact h3 {
+      margin: 0 0 0.35rem;
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--accent);
+    }
+    .fact p { margin: 0.2rem 0; font-size: 0.92rem; }
+    #minimap {
+      height: 260px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      margin: 0.5rem 0 1rem;
+      z-index: 0;
+    }
+    .seasons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 0.85rem;
+    }
+    .season {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.9rem 1rem;
+    }
+    .season.current { border-color: var(--accent); background: var(--accent-soft); }
+    .season h3 { margin: 0 0 0.4rem; font-size: 1rem; }
+    .season ul { margin: 0; padding-left: 1.1rem; font-size: 0.92rem; }
+    .season .note { font-size: 0.82rem; margin: 0.5rem 0 0; }
+    .now-badge {
+      background: var(--accent); color: #fff;
+      font-size: 0.68rem; padding: 0.1rem 0.45rem;
+      border-radius: 99px; vertical-align: middle;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .sources { font-size: 0.92rem; }
+    #recent table { border-collapse: collapse; width: 100%; max-width: 46rem; font-size: 0.92rem; }
+    #recent th, #recent td {
+      text-align: left; padding: 0.35rem 0.6rem;
+      border-bottom: 1px solid var(--line);
+    }
+    #recent th { color: var(--accent); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  </style>
+
+  <script>
+    import L from 'leaflet';
+    import 'leaflet/dist/leaflet.css';
+    import { markerIcon } from '../../lib/marker';
+
+    // Mini map
+    const mm = document.getElementById('minimap')!;
+    const lat = Number(mm.dataset.lat);
+    const lng = Number(mm.dataset.lng);
+    const map = L.map('minimap', { scrollWheelZoom: false }).setView([lat, lng], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors', maxZoom: 18,
+    }).addTo(map);
+    L.marker([lat, lng], { icon: markerIcon }).addTo(map).bindPopup(mm.dataset.name!);
+
+    // Mark current season
+    const m = new Date().getMonth() + 1;
+    const season = m >= 3 && m <= 5 ? 'spring' : m >= 6 && m <= 8 ? 'summer' : m >= 9 && m <= 11 ? 'fall' : 'winter';
+    const el = document.querySelector(`.season[data-season="${season}"]`);
+    if (el) {
+      el.classList.add('current');
+      el.querySelector('.now-badge').hidden = false;
+    }
+
+    // Live eBird sightings
+    const recent = document.getElementById('recent');
+    fetch(`/api/ebird?locId=${recent.dataset.locid}`)
+      .then((r) => { if (!r.ok) throw new Error(); return r.json(); })
+      .then((obs) => {
+        if (!obs.length) {
+          recent.innerHTML = '<p class="muted">No reports in the last 30 days.</p>';
+          return;
+        }
+        const rows = obs
+          .map((o) => `<tr><td>${o.name}</td><td>${o.count ?? '—'}</td><td>${o.date.slice(0, 10)}</td></tr>`)
+          .join('');
+        recent.innerHTML = `<p class="muted">${obs.length} species reported.</p>
+          <table><thead><tr><th>Species</th><th>Count</th><th>Last seen</th></tr></thead>
+          <tbody>${rows}</tbody></table>`;
+      })
+      .catch(() => {
+        recent.innerHTML = '<p class="muted">Live sightings are unavailable right now. The seasonal lists above still apply.</p>';
+      });
+  </script>
+</Base>

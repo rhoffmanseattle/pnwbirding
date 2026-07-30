@@ -1,0 +1,85 @@
+---
+import Base from '../layouts/Base.astro';
+import locations from '../data/locations.json';
+
+const pins = locations.map((l) => ({
+  slug: l.slug, name: l.name, lat: l.lat, lng: l.lng, region: l.region, rating: l.effort.rating,
+}));
+---
+<Base>
+  <h1>Where should we go birding?</h1>
+  <p class="muted">
+    Eleven proven spots around Puget Sound, from a lunch-break wetland loop to an
+    eleven-mile sand spit. Click a pin or a card for seasonal birds, effort, timing,
+    and what it's actually like.
+  </p>
+
+  <div id="map" aria-label="Map of birding locations"></div>
+  <script type="application/json" id="pins-data" set:html={JSON.stringify(pins)} />
+
+  <h2>All locations</h2>
+  <div class="cards">
+    {locations.map((l) => (
+      <a class="card" href={`/locations/${l.slug}/`}>
+        <span class="region">{l.region}</span>
+        <strong>{l.name}</strong>
+        <span class="meta">{l.habitat}</span>
+        <span class="meta effort">{l.effort.rating} · {l.effort.distance}</span>
+      </a>
+    ))}
+  </div>
+
+  <style>
+    #map {
+      height: 440px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      margin: 1rem 0 0.5rem;
+      z-index: 0;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 0.85rem;
+      margin-top: 0.75rem;
+    }
+    .card {
+      display: flex; flex-direction: column; gap: 0.2rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.9rem 1rem;
+      text-decoration: none;
+      color: var(--ink);
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .card:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .card .region {
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--accent); font-weight: 600;
+    }
+    .card .meta { font-size: 0.85rem; color: var(--ink-soft); }
+    .card .effort { color: var(--amber); }
+  </style>
+
+  <script>
+    import L from 'leaflet';
+    import 'leaflet/dist/leaflet.css';
+    import { markerIcon } from '../lib/marker';
+
+    const pins = JSON.parse(document.getElementById('pins-data')!.textContent!);
+    const map = L.map('map', { scrollWheelZoom: false });
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 18,
+    }).addTo(map);
+    const group = L.featureGroup(
+      pins.map((p: any) =>
+        L.marker([p.lat, p.lng], { icon: markerIcon }).bindPopup(
+          `<strong>${p.name}</strong><br>${p.region} · ${p.rating}<br><a href="/locations/${p.slug}/">Details →</a>`
+        )
+      )
+    ).addTo(map);
+    map.fitBounds(group.getBounds().pad(0.12));
+  </script>
+</Base>
