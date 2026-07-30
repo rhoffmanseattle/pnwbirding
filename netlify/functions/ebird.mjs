@@ -16,6 +16,14 @@ const ALLOWED_LOC_IDS = new Set([
   'L29690471', // Dungeness NWR / Dungeness Spit
   'L165807', // Spencer Island
   'L233763', // Ebey's Landing
+  'L257950', // M Street Marsh/Emerald Downs
+  'L2430450', // Auburn Environmental Park
+  'L2608551', // Constellation Park (Charles Richey Sr Viewpoint)
+  'L632852', // Jack Block Park
+  'L1280391', // həʔapus Village Park
+  'L839588', // Schmitz Preserve Park
+  'L320409', // Leavenworth National Fish Hatchery
+  'L318691', // Lincoln Park
 ]);
 
 export default async (request) => {

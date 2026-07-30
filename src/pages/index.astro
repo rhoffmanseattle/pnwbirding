@@ -9,36 +9,24 @@ const pins = sorted.map((l) => ({
   order: String(l.order).padStart(2, '0'),
 }));
 
-const birds = [
-  { top: 21, w: 30, glide: 38, delay: -4, opacity: 0.82, flap: 1.5 },
-  { top: 27, w: 22, glide: 44, delay: -19, opacity: 0.7, flap: 1.75 },
-  { top: 15, w: 17, glide: 52, delay: -34, opacity: 0.58, flap: 2.05 },
-  { top: 34, w: 13, glide: 61, delay: -11, opacity: 0.46, flap: 2.4 },
-  { top: 11, w: 25, glide: 47, delay: -28, opacity: 0.66, flap: 1.65 },
-];
 ---
 <Base>
   <section class="hero">
     <div class="sky"></div>
     <div class="glow"></div>
-    {birds.map((b) => (
-      <div class="bird" style={`top:${b.top}%; width:${b.w}px; height:${b.w * 0.4}px; animation: glide ${b.glide}s linear infinite; animation-delay:${b.delay}s; opacity:${b.opacity};`}>
-        <span style={`animation-duration:${b.flap}s`}></span>
-        <span style={`animation-duration:${b.flap}s`}></span>
-      </div>
-    ))}
+    <div id="flock"></div>
     <div class="hero-content">
       <p class="mono-eyebrow eyebrow">Salish Sea · Cascade foothills · South Sound</p>
       <h1>Where should we<br />go birding?</h1>
       <div class="hero-rule"></div>
       <p class="lede">
-        Thirteen proven spots around Puget Sound — from a lunch-break wetland loop
-        to an eleven-mile sand spit. Seasonal birds, real distances, and what it's
-        actually like on the ground.
+        Twenty-two proven spots, from West Seattle pocket parks and a lunch-break
+        wetland loop to an eleven-mile sand spit and a hatchery over the pass.
+        Seasonal birds, real distances, and what it's actually like on the ground.
       </p>
       <div class="actions">
         <a class="btn-primary" href="#map">Open the map</a>
-        <a class="btn-ghost" href="#list">All thirteen ↓</a>
+        <a class="btn-ghost" href="#list">All twenty-two ↓</a>
       </div>
     </div>
   </section>
@@ -81,8 +69,38 @@ const birds = [
 
   <script type="application/json" id="pins-data" set:html={JSON.stringify(pins)} />
 
+  <script is:inline>
+    // 5-7 bird marks, randomized each visit within the design's parameter ranges.
+    (function () {
+      var flock = document.getElementById('flock');
+      if (!flock) return;
+      var count = 5 + Math.floor(Math.random() * 3); // 5, 6, or 7
+      var rand = function (min, max) { return min + Math.random() * (max - min); };
+      for (var i = 0; i < count; i++) {
+        var w = rand(13, 30);
+        var flap = rand(1.5, 2.4).toFixed(2);
+        var bird = document.createElement('div');
+        bird.className = 'bird';
+        bird.style.cssText =
+          'top:' + rand(8, 38).toFixed(1) + '%;' +
+          'width:' + w.toFixed(0) + 'px;' +
+          'height:' + (w * 0.4).toFixed(0) + 'px;' +
+          'animation: glide ' + rand(36, 62).toFixed(0) + 's linear infinite;' +
+          'animation-delay: -' + rand(2, 36).toFixed(0) + 's;' +
+          'opacity:' + rand(0.45, 0.85).toFixed(2) + ';';
+        var l = document.createElement('span');
+        var r = document.createElement('span');
+        l.style.animationDuration = flap + 's';
+        r.style.animationDuration = flap + 's';
+        bird.appendChild(l); bird.appendChild(r);
+        flock.appendChild(bird);
+      }
+    })();
+  </script>
+
   <style>
     .hero { position: relative; min-height: 100vh; overflow: hidden; display: flex; align-items: flex-end; }
+    #flock { position: absolute; inset: 0; pointer-events: none; }
     .sky {
       position: absolute; inset: -8%;
       background: linear-gradient(178deg,

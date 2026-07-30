@@ -1,5 +1,73 @@
 [
   {
+    "slug": "lewis-lake-nature-park",
+    "name": "Lewis Lake Nature Park",
+    "region": "Auburn",
+    "habitat": "Small lake, neighborhood greenbelt",
+    "effortLine": "Easy · 0.5 mi loop",
+    "effortTier": "Easy",
+    "terrain": "Level dirt-and-gravel loop around the lake; a bench swing overlooks the water.",
+    "when": "Any time. This is the five-minute-decision outing, best on quiet mornings.",
+    "access": "Free street parking at 902 W St NW, Auburn. Tucked into a residential neighborhood.",
+    "blurb": "A neighborhood pocket park with a half-mile loop around a small lake and a bench swing over the water. Nothing rare, everything close: ducks, herons, and whatever else drops in, minutes from home.",
+    "lat": 47.3187,
+    "lng": -122.2437,
+    "locId": null,
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Wood Duck",
+          "Tree Swallow",
+          "Anna's Hummingbird",
+          "Red-winged Blackbird"
+        ],
+        "note": "The lake edge wakes up; swallows over the water."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Pied-billed Grebe",
+          "Cedar Waxwing",
+          "Willow Flycatcher",
+          "Mallard"
+        ],
+        "note": "Duck broods weave along the shoreline."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Ring-necked Duck",
+          "Hooded Merganser",
+          "Fox Sparrow",
+          "Ruby-crowned Kinglet"
+        ],
+        "note": "Divers return as the water cools."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Bufflehead",
+          "American Wigeon",
+          "Bald Eagle",
+          "Dark-eyed Junco"
+        ],
+        "note": "Small but steady wintering flock."
+      }
+    ],
+    "sources": [
+      {
+        "title": "City of Auburn Parks",
+        "url": "https://www.auburnwa.gov/cms/One.aspx?portalId=11470638&pageId=12747837"
+      },
+      {
+        "title": "Ryan's field notes",
+        "url": "/"
+      }
+    ],
+    "order": 1
+  },
+  {
     "slug": "crockett-lake",
     "name": "Crockett Lake",
     "region": "Whidbey Island",
@@ -54,7 +122,7 @@
         "note": "Raptors work the wet fields at dusk."
       }
     ],
-    "order": 1,
+    "order": 2,
     "locId": "L109534",
     "sources": [
       {
@@ -72,8 +140,364 @@
     ]
   },
   {
+    "slug": "m-street-marsh",
+    "name": "M Street Marsh",
+    "region": "Auburn",
+    "habitat": "Valley ponds, wet fields",
+    "effortLine": "Easy · roadside ponds",
+    "effortTier": "Easy",
+    "terrain": "Viewing from the road edge and short walks; flat.",
+    "when": "Winter and migration are the show. Raptors are reliable most of the year.",
+    "access": "Free roadside viewing near 2101 M St NW, Auburn.",
+    "blurb": "Local birders rate this modest set of valley ponds among the best hotspots around, and the checklist numbers back them up: 179 species recorded. Ducks, geese, and swans through winter and migration, shorebirds in spring and fall, and a steady rotation of raptors, from Peregrines and kestrels to Cooper's Hawks and eagles.",
+    "lat": 47.3216,
+    "lng": -122.2192,
+    "locId": "L257950",
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Cinnamon Teal",
+          "Northern Shoveler",
+          "Greater Yellowlegs",
+          "Savannah Sparrow"
+        ],
+        "note": "Shorebirds work the pond margins."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "American Kestrel",
+          "Killdeer",
+          "Cliff Swallow",
+          "Green Heron"
+        ],
+        "note": "Quieter, but the raptors stay."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Least Sandpiper",
+          "Long-billed Dowitcher",
+          "Peregrine Falcon",
+          "American Pipit"
+        ],
+        "note": "Migration turns the ponds over daily."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Trumpeter Swan",
+          "Cackling Goose",
+          "Northern Pintail",
+          "Bald Eagle"
+        ],
+        "note": "Swans and geese pack the wet fields."
+      }
+    ],
+    "sources": [
+      {
+        "title": "eBird hotspot: M Street Marsh/Emerald Downs",
+        "url": "https://ebird.org/hotspot/L257950"
+      },
+      {
+        "title": "Ryan's field notes",
+        "url": "/"
+      }
+    ],
+    "order": 3
+  },
+  {
+    "slug": "constellation-park",
+    "name": "Constellation Park",
+    "region": "West Seattle",
+    "habitat": "Rocky shoreline, tide pools",
+    "effortLine": "Easy · shoreline stroll",
+    "effortTier": "Easy",
+    "terrain": "Flat sidewalk along Beach Drive; the birds are on the rocks below the seawall.",
+    "when": "Go at low tide, fall through spring. Minutes from Lincoln Park, so the two make one easy morning.",
+    "access": "Free street parking on Beach Dr SW, south of Alki Point.",
+    "blurb": "A short strip of rocky shoreline south of the Alki Point lighthouse where the birds work at close range: oystercatchers, turnstones, and Harlequin Ducks on the rocks at low tide, with harbor seals hauled out beyond them. Some of the closest looks at rock-loving shorebirds anywhere in the city.",
+    "lat": 47.5665,
+    "lng": -122.4089,
+    "locId": "L2608551",
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Black Turnstone",
+          "Brant",
+          "Caspian Tern",
+          "Harlequin Duck"
+        ],
+        "note": "Turnstones linger into April; Brant offshore."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Black Oystercatcher",
+          "Pigeon Guillemot",
+          "Heermann's Gull",
+          "Osprey"
+        ],
+        "note": "Oystercatchers pipe along the tideline."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Black Turnstone",
+          "Surfbird",
+          "Common Murre",
+          "Red-necked Grebe"
+        ],
+        "note": "The rock specialists return with the first storms."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Harlequin Duck",
+          "Surfbird",
+          "Barrow's Goldeneye",
+          "Long-tailed Duck (some years)"
+        ],
+        "note": "Peak season on the rocks and the water."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Seattle Parks: Charles Richey Sr Viewpoint",
+        "url": "https://www.seattle.gov/parks/allparks/charles-richey-sr-viewpoint"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L2608551"
+      },
+      {
+        "title": "Ryan's field notes",
+        "url": "/"
+      }
+    ],
+    "order": 4
+  },
+  {
+    "slug": "jack-block-park",
+    "name": "Jack Block Park",
+    "region": "West Seattle",
+    "habitat": "Harbor shoreline, observation tower",
+    "effortLine": "Easy · 0.7 mi + tower",
+    "effortTier": "Easy",
+    "terrain": "Paved paths and a 45-foot observation tower; fully level otherwise.",
+    "when": "Afternoons. The tower faces north toward downtown, so mornings are backlit. Note the pier section has had access closures since 2020.",
+    "access": "Free lot at 2130 Harbor Ave SW. Port of Seattle park.",
+    "blurb": "A Port of Seattle park with a 45-foot observation tower over Elliott Bay: gulls, herons, and Ospreys against the container cranes, with the downtown skyline across the water. The industrial backdrop is half the charm, and the tower gives a vantage no other West Seattle spot has.",
+    "lat": 47.5758,
+    "lng": -122.3671,
+    "locId": "L632852",
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Caspian Tern",
+          "Brant",
+          "Osprey",
+          "Savannah Sparrow"
+        ],
+        "note": "Terns return to the harbor; Ospreys to the cranes."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Osprey",
+          "Heermann's Gull",
+          "Pigeon Guillemot",
+          "Purple Martin"
+        ],
+        "note": "Ospreys fish the bay all day."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Common Murre",
+          "Red-necked Grebe",
+          "Horned Grebe",
+          "Peregrine Falcon"
+        ],
+        "note": "Murres and grebes filter into the harbor."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Barrow's Goldeneye",
+          "Bufflehead",
+          "Red-breasted Merganser",
+          "Western Grebe"
+        ],
+        "note": "Rafts of divers off the tower."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Port of Seattle: Jack Block Park",
+        "url": "https://www.portseattle.org/places/jack-block-park"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L632852"
+      },
+      {
+        "title": "Ryan's field notes",
+        "url": "/"
+      }
+    ],
+    "order": 5
+  },
+  {
+    "slug": "heapus-village-park",
+    "name": "hə́ʔapus Village Park & Shoreline Habitat",
+    "region": "West Seattle",
+    "habitat": "Restored Duwamish shoreline",
+    "effortLine": "Easy · short river loop",
+    "effortTier": "Easy",
+    "terrain": "Short, level walking loop through native plantings to the river bank.",
+    "when": "Mornings for songbirds in the plantings; any tide for the river. Quiet on weekdays.",
+    "access": "Free small lot at 4500 Duwamish River Trail. No restrooms. Formerly Terminal 107 Park.",
+    "blurb": "A small restored pocket of the Duwamish shoreline where native plantings are bringing the birds back: Ospreys and kingfishers over the river, shorebirds on the mud at low tide, sparrows in the young habitat. Short, quiet, and a hopeful piece of a working river.",
+    "lat": 47.556,
+    "lng": -122.348,
+    "locId": "L1280391",
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Osprey",
+          "Spotted Sandpiper",
+          "Tree Swallow",
+          "Yellow-rumped Warbler"
+        ],
+        "note": "Migrants filter through the restoration plantings."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Osprey",
+          "Belted Kingfisher",
+          "Killdeer",
+          "Cedar Waxwing"
+        ],
+        "note": "Kingfishers rattle along the bank."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Greater Yellowlegs",
+          "Green-winged Teal",
+          "Lincoln's Sparrow",
+          "Merlin"
+        ],
+        "note": "Low tide exposes feeding mud."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Common Goldeneye",
+          "Bufflehead",
+          "Great Blue Heron",
+          "Bald Eagle"
+        ],
+        "note": "River waterfowl settle in."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Seattle Parks: həʔapus Village Park",
+        "url": "https://www.seattle.gov/parks/allparks/haapus-village-park-shoreline-habitat"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L1280391"
+      },
+      {
+        "title": "Ryan's field notes",
+        "url": "/"
+      }
+    ],
+    "order": 6
+  },
+  {
+    "slug": "auburn-environmental-park",
+    "name": "Auburn Environmental Park",
+    "region": "Auburn",
+    "habitat": "Protected wetland, boardwalk",
+    "effortLine": "Easy · boardwalk + tower",
+    "effortTier": "Easy",
+    "terrain": "1,200-foot raised boardwalk with interpretive signs, plus a lookout tower over the wetland.",
+    "when": "Early. The small stone lot holds about six cars and fills.",
+    "access": "Free. Small lot at 413 Western St NW, Auburn.",
+    "blurb": "A 207-acre protected wetland in the Green River valley, walked on a 1,200-foot raised boardwalk with a lookout tower over the marsh. No formal blinds, but the sightlines are reliably good, and the interpretive signs make it an easy walk to share with non-birders.",
+    "lat": 47.313,
+    "lng": -122.2404,
+    "locId": "L2430450",
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Tree Swallow",
+          "Common Yellowthroat",
+          "Wilson's Warbler",
+          "Cinnamon Teal"
+        ],
+        "note": "The marsh sings; swallows claim the snags."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Willow Flycatcher",
+          "Cedar Waxwing",
+          "Green Heron",
+          "Osprey"
+        ],
+        "note": "Watch the wetland edge from the tower."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Golden-crowned Sparrow",
+          "Lincoln's Sparrow",
+          "Wilson's Snipe",
+          "Merlin"
+        ],
+        "note": "Sparrows pile into the wet thickets."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "American Wigeon",
+          "Green-winged Teal",
+          "Bald Eagle",
+          "Marsh Wren"
+        ],
+        "note": "Wintering dabblers and a lot of quiet."
+      }
+    ],
+    "sources": [
+      {
+        "title": "City of Auburn: Auburn Environmental Park",
+        "url": "https://www.auburnwa.gov/cms/one.aspx?pageId=13674307"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L2430450"
+      },
+      {
+        "title": "Ryan's field notes",
+        "url": "/"
+      }
+    ],
+    "order": 7
+  },
+  {
     "slug": "juanita-bay-park",
-    "order": 2,
+    "order": 8,
     "name": "Juanita Bay Park",
     "region": "Kirkland",
     "habitat": "Boardwalk, cattail marsh, bay",
@@ -144,8 +568,80 @@
     ]
   },
   {
+    "slug": "schmitz-preserve-park",
+    "name": "Schmitz Preserve Park",
+    "region": "West Seattle",
+    "habitat": "Old-growth forest ravine",
+    "effortLine": "Easy · 1 mi forest loop",
+    "effortTier": "Easy",
+    "terrain": "Soft dirt trails through a ravine; gentle grades, dim under the canopy.",
+    "when": "Mid-morning on bright days, when light reaches the understory. Slower birding than the shoreline, but a different cast entirely.",
+    "access": "Free street parking near 5551 SW Admiral Way.",
+    "blurb": "A pocket of genuine old-growth forest in the middle of West Seattle, dim and quiet under the big trees. Woodpeckers, creepers, and kinglets move through in mixed flocks, and the setting is unmatched: this is what the whole peninsula looked like before the city.",
+    "lat": 47.571,
+    "lng": -122.3982,
+    "locId": "L839588",
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Pacific Wren",
+          "Wilson's Warbler",
+          "Brown Creeper",
+          "Pacific-slope Flycatcher"
+        ],
+        "note": "Song fills the ravine by April."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Swainson's Thrush",
+          "Black-throated Gray Warbler",
+          "Pileated Woodpecker",
+          "Western Tanager"
+        ],
+        "note": "Thrush song at dawn is the draw."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Varied Thrush",
+          "Golden-crowned Kinglet",
+          "Red-breasted Sapsucker",
+          "Hermit Thrush"
+        ],
+        "note": "Mountain birds drop into the lowland forest."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Pacific Wren",
+          "Barred Owl",
+          "Ruby-crowned Kinglet",
+          "Spotted Towhee"
+        ],
+        "note": "Mixed flocks and a chance of owls."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Seattle Parks: Schmitz Preserve Park",
+        "url": "https://www.seattle.gov/parks/allparks/schmitz-preserve-park"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L839588"
+      },
+      {
+        "title": "Ryan's field notes",
+        "url": "/"
+      }
+    ],
+    "order": 9
+  },
+  {
     "slug": "edmonds-marsh-waterfront",
-    "order": 3,
+    "order": 10,
     "name": "Edmonds Marsh & Waterfront",
     "region": "Edmonds",
     "habitat": "Saltmarsh, pier, open Sound",
@@ -217,7 +713,7 @@
   },
   {
     "slug": "union-bay-natural-area",
-    "order": 4,
+    "order": 11,
     "name": "Union Bay Natural Area (Montlake Fill)",
     "region": "Seattle",
     "habitat": "Wetland, marsh, meadow, lakeshore",
@@ -288,8 +784,80 @@
     ]
   },
   {
+    "slug": "leavenworth-fish-hatchery",
+    "name": "Leavenworth National Fish Hatchery",
+    "region": "Leavenworth",
+    "habitat": "Icicle Creek, ponderosa pine, settling ponds",
+    "effortLine": "Easy · 1–2 mi, flat",
+    "effortTier": "Easy",
+    "terrain": "Level gravel trails along Icicle Creek; benches on the Birding Bench Trail face the morning light.",
+    "when": "Mornings, spring through early summer for the east-slope specialties. Grounds open daily year-round; the drive from Seattle is about 2.5 hours.",
+    "access": "Free. 12790 Fish Hatchery Rd, Leavenworth. Visitor center open Mon–Sat when staffed; trail flyer at the signboards.",
+    "blurb": "An unexpected birding destination on the east slope: 179 species recorded on the hatchery grounds along Icicle Creek. White-headed Woodpeckers nest in the dead pines at the south end, Calliope Hummingbirds work the flowers, swallows swarm the settling ponds, and in late summer the spawning channels pull in everything that eats salmon.",
+    "lat": 47.5612,
+    "lng": -120.6721,
+    "locId": "L320409",
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Calliope Hummingbird",
+          "White-headed Woodpecker",
+          "Nashville Warbler",
+          "Red-naped Sapsucker"
+        ],
+        "note": "East-slope specialties arrive with the pines' first warmth."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Western Tanager",
+          "Lazuli Bunting",
+          "Vaux's Swift",
+          "Osprey"
+        ],
+        "note": "Color season; swifts and swallows over the ponds."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "American Dipper",
+          "Townsend's Solitaire",
+          "Cedar Waxwing",
+          "Golden-crowned Kinglet"
+        ],
+        "note": "Dippers work the spawning channels."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "American Dipper",
+          "Common Merganser",
+          "Bald Eagle",
+          "Bohemian Waxwing (some years)"
+        ],
+        "note": "Eagles gather on spawned-out salmon."
+      }
+    ],
+    "sources": [
+      {
+        "title": "USFWS: Leavenworth National Fish Hatchery",
+        "url": "https://www.fws.gov/fish-hatchery/leavenworth"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L320409"
+      },
+      {
+        "title": "Ryan's field notes",
+        "url": "/"
+      }
+    ],
+    "order": 12
+  },
+  {
     "slug": "magnuson-park",
-    "order": 5,
+    "order": 13,
     "name": "Magnuson Park",
     "region": "Seattle",
     "habitat": "Restored wetland, shrub, shoreline",
@@ -357,7 +925,7 @@
   },
   {
     "slug": "seward-park",
-    "order": 6,
+    "order": 14,
     "name": "Seward Park",
     "region": "Seattle",
     "habitat": "Old-growth forest, lakeshore",
@@ -428,8 +996,80 @@
     ]
   },
   {
+    "slug": "lincoln-park",
+    "name": "Lincoln Park",
+    "region": "West Seattle",
+    "habitat": "Shoreline, bluff forest",
+    "effortLine": "Easy · 2–3 mi shoreline",
+    "effortTier": "Easy",
+    "terrain": "Flat paved shoreline path; stairs and sloped trails connect the bluff forest above.",
+    "when": "High tide, when the birds push close to the seawall. The Barred Owls are found by listening for mobbing crows.",
+    "access": "Free lots off Fauntleroy Way SW, by the ferry terminal.",
+    "blurb": "West Seattle's reliable shoreline mile: herons and kingfishers on the beach, goldeneye and bufflehead rafting offshore, eagles overhead, and a resident Barred Owl pair in the forest above. The closest dependable birding to home, and it fits in an hour when that's all there is.",
+    "lat": 47.5308,
+    "lng": -122.393,
+    "locId": "L318691",
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Rufous Hummingbird",
+          "Orange-crowned Warbler",
+          "Pigeon Guillemot",
+          "Osprey"
+        ],
+        "note": "Migrants move along the bluff; guillemots return."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Barred Owl",
+          "Belted Kingfisher",
+          "Pigeon Guillemot",
+          "Purple Martin"
+        ],
+        "note": "Listen for young owls begging in the woods."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Surf Scoter",
+          "Common Murre",
+          "Golden-crowned Kinglet",
+          "Fox Sparrow"
+        ],
+        "note": "Sea ducks build offshore through October."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Common Goldeneye",
+          "Bufflehead",
+          "Red-breasted Merganser",
+          "Varied Thrush"
+        ],
+        "note": "Peak water birding; thrushes in the forest."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Seattle Parks: Lincoln Park",
+        "url": "https://www.seattle.gov/parks/allparks/lincoln-park"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L318691"
+      },
+      {
+        "title": "Ryan's field notes",
+        "url": "/"
+      }
+    ],
+    "order": 15
+  },
+  {
     "slug": "marymoor-park",
-    "order": 7,
+    "order": 16,
     "name": "Marymoor Park",
     "region": "Redmond",
     "habitat": "Riparian woods, meadow, slough",
@@ -501,7 +1141,7 @@
   },
   {
     "slug": "billy-frank-jr-nisqually-nwr",
-    "order": 8,
+    "order": 17,
     "name": "Billy Frank Jr. Nisqually NWR",
     "region": "Olympia",
     "habitat": "Estuary, boardwalk, freshwater ponds",
@@ -573,7 +1213,7 @@
   },
   {
     "slug": "discovery-park",
-    "order": 9,
+    "order": 18,
     "name": "Discovery Park",
     "region": "Seattle",
     "habitat": "Forest, bluff meadow, beach, saltwater",
@@ -698,7 +1338,7 @@
         "note": "Quiet trails, busy water."
       }
     ],
-    "order": 10,
+    "order": 19,
     "locId": "L773216",
     "sources": [
       {
@@ -717,7 +1357,7 @@
   },
   {
     "slug": "spencer-island",
-    "order": 11,
+    "order": 20,
     "name": "Spencer Island",
     "region": "Everett",
     "habitat": "Dike loop, freshwater and tidal marsh",
@@ -789,7 +1429,7 @@
   },
   {
     "slug": "ebeys-landing",
-    "order": 12,
+    "order": 21,
     "name": "Ebey's Landing",
     "region": "Whidbey Island",
     "habitat": "Prairie bluff, lagoon, beach",
@@ -861,7 +1501,7 @@
   },
   {
     "slug": "dungeness-spit",
-    "order": 13,
+    "order": 22,
     "name": "Dungeness Spit",
     "region": "Sequim",
     "habitat": "Sand spit, bluff forest, harbor",

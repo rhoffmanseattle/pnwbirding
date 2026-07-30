@@ -1,6 +1,7 @@
 ---
+import locations from '../data/locations.json';
 const { title, description } = Astro.props;
-const seasonNames = ['Winter', 'Winter', 'Spring', 'Spring', 'Spring', 'Summer', 'Summer', 'Summer', 'Fall', 'Fall', 'Fall', 'Winter'];
+const spotCount = locations.length;
 ---
 <!doctype html>
 <html lang="en">
@@ -130,7 +131,7 @@ const seasonNames = ['Winter', 'Winter', 'Spring', 'Spring', 'Spring', 'Summer',
       <a class="wordmark" href="/">PNW Birding</a>
       <span class="tagline">where to go · what you'll see · how far you'll walk</span>
       <span class="spacer"></span>
-      <span class="status" id="header-status">13 spots</span>
+      <span class="status" id="header-status" data-count={spotCount}>{spotCount} spots</span>
     </header>
 
     <slot />
@@ -154,7 +155,7 @@ const seasonNames = ['Winter', 'Winter', 'Spring', 'Spring', 'Spring', 'Summer',
         var m = new Date().getMonth();
         var season = ['Winter','Winter','Spring','Spring','Spring','Summer','Summer','Summer','Fall','Fall','Fall','Winter'][m];
         var el = document.getElementById('header-status');
-        if (el) el.textContent = season + ' · 13 spots';
+        if (el) el.textContent = season + ' · ' + el.dataset.count + ' spots';
         document.documentElement.dataset.season = season.toLowerCase();
       })();
     </script>

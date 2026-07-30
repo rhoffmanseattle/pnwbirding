@@ -25,7 +25,7 @@ const tierColor = { Easy: '#3fc0a8', Moderate: '#f0c67c', Strenuous: '#ef7f5e' }
         <span style="animation-duration:2.1s"></span><span style="animation-duration:2.1s"></span>
       </div>
       <div class="hero-content">
-        <p class="back"><a href="/#list">← All thirteen spots</a></p>
+        <p class="back"><a href="/#list">← All {locations.length} spots</a></p>
         <p class="mono-eyebrow eyebrow">{orderStr} · {loc.region}</p>
         <h1>{loc.name}</h1>
         <p class="habitat-line">{loc.habitat}</p>
@@ -52,7 +52,7 @@ const tierColor = { Easy: '#3fc0a8', Moderate: '#f0c67c', Strenuous: '#ef7f5e' }
             {loc.access}
             <span class="fact-links">
               <a href={`https://www.google.com/maps/search/?api=1&query=${loc.lat},${loc.lng}`}>Directions</a>
-              <a href={`https://ebird.org/hotspot/${loc.locId}`}>eBird hotspot</a>
+              {loc.locId && <a href={`https://ebird.org/hotspot/${loc.locId}`}>eBird hotspot</a>}
             </span>
           </span>
         </div>
@@ -258,6 +258,9 @@ const tierColor = { Easy: '#3fc0a8', Moderate: '#f0c67c', Strenuous: '#ef7f5e' }
 
     // Live eBird sightings
     const recent = document.getElementById('recent')!;
+    if (!recent.dataset.locid) {
+      recent.innerHTML = '<p class="loading">This spot has no eBird hotspot of its own, so there is no live feed. The seasonal lists above are the guide.</p>';
+    } else
     fetch(`/api/ebird?locId=${recent.dataset.locid}`)
       .then((r) => { if (!r.ok) throw new Error(); return r.json(); })
       .then((obs: any[]) => {
