@@ -1140,8 +1140,80 @@
     ]
   },
   {
+    "slug": "flaming-geyser-state-park",
+    "name": "Flaming Geyser State Park",
+    "region": "Green River Valley",
+    "habitat": "River frontage, open fields, mixed forest",
+    "effortLine": "Easy · 1–3 mi riverside",
+    "effortTier": "Easy",
+    "terrain": "Flat riverside and field-edge trails; wander as far as you like across the big property.",
+    "when": "Fall for eagles on the salmon runs; spring mornings for song along the river. Roomy enough to escape crowds any day.",
+    "access": "Discover Pass required. 23700 SE Flaming Geyser Rd, Auburn. Restrooms at the main lots.",
+    "blurb": "A big riverside property where the Green River comes out of its gorge: cottonwood river frontage, open farmland edges, and space to actually cover ground. Mergansers ride the current, swallows work the fields, and when the salmon come up in fall the eagles follow. The strongest pick in the valley when you want a longer wander rather than a single stakeout.",
+    "lat": 47.2737,
+    "lng": -122.0272,
+    "locId": "L302967",
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Rufous Hummingbird",
+          "Violet-green Swallow",
+          "Band-tailed Pigeon",
+          "Common Merganser"
+        ],
+        "note": "Song along the river corridor; swallows over the fields."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Willow Flycatcher",
+          "Cedar Waxwing",
+          "Osprey",
+          "Common Merganser"
+        ],
+        "note": "Merganser broods ride the riffles."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Bald Eagle",
+          "Varied Thrush",
+          "Golden-crowned Sparrow",
+          "American Pipit"
+        ],
+        "note": "Salmon runs pull the eagles in."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Bald Eagle",
+          "Common Goldeneye",
+          "American Dipper (some days)",
+          "Killdeer"
+        ],
+        "note": "Check the river seams and the field edges."
+      }
+    ],
+    "sources": [
+      {
+        "title": "WA State Parks: Flaming Geyser",
+        "url": "https://parks.wa.gov/find-parks/state-parks/flaming-geyser-state-park"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L302967"
+      },
+      {
+        "title": "Ryan's field notes",
+        "url": "/"
+      }
+    ],
+    "order": 17
+  },
+  {
     "slug": "billy-frank-jr-nisqually-nwr",
-    "order": 17,
+    "order": 18,
     "name": "Billy Frank Jr. Nisqually NWR",
     "region": "Olympia",
     "habitat": "Estuary, boardwalk, freshwater ponds",
@@ -1213,7 +1285,7 @@
   },
   {
     "slug": "discovery-park",
-    "order": 18,
+    "order": 19,
     "name": "Discovery Park",
     "region": "Seattle",
     "habitat": "Forest, bluff meadow, beach, saltwater",
@@ -1338,7 +1410,7 @@
         "note": "Quiet trails, busy water."
       }
     ],
-    "order": 19,
+    "order": 20,
     "locId": "L773216",
     "sources": [
       {
@@ -1357,7 +1429,7 @@
   },
   {
     "slug": "spencer-island",
-    "order": 20,
+    "order": 21,
     "name": "Spencer Island",
     "region": "Everett",
     "habitat": "Dike loop, freshwater and tidal marsh",
@@ -1429,7 +1501,7 @@
   },
   {
     "slug": "ebeys-landing",
-    "order": 21,
+    "order": 22,
     "name": "Ebey's Landing",
     "region": "Whidbey Island",
     "habitat": "Prairie bluff, lagoon, beach",
@@ -1501,7 +1573,7 @@
   },
   {
     "slug": "dungeness-spit",
-    "order": 22,
+    "order": 23,
     "name": "Dungeness Spit",
     "region": "Sequim",
     "habitat": "Sand spit, bluff forest, harbor",

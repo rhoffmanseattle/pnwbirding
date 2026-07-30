@@ -24,6 +24,7 @@ const ALLOWED_LOC_IDS = new Set([
   'L839588', // Schmitz Preserve Park
   'L320409', // Leavenworth National Fish Hatchery
   'L318691', // Lincoln Park
+  'L302967', // Flaming Geyser State Park
 ]);
 
 export default async (request) => {
