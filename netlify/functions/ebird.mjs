@@ -13,7 +13,9 @@ const ALLOWED_LOC_IDS = new Set([
   'L282253', // Billy Frank Jr. Nisqually NWR
   'L109534', // Crockett Lake
   'L773216', // Fort Ebey State Park
-  'L29690471', // Dungeness NWR
+  'L29690471', // Dungeness NWR / Dungeness Spit
+  'L165807', // Spencer Island
+  'L233763', // Ebey's Landing
 ]);
 
 export default async (request) => {

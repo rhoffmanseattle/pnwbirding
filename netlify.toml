@@ -9,3 +9,59 @@
   from = "/api/ebird"
   to = "/.netlify/functions/ebird"
   status = 200
+
+# Old routes (submitted to Google via the original sitemap) -> new /spots/ routes
+[[redirects]]
+  from = "/locations/union-bay-natural-area/*"
+  to = "/spots/union-bay-natural-area/"
+  status = 301
+
+[[redirects]]
+  from = "/locations/discovery-park/*"
+  to = "/spots/discovery-park/"
+  status = 301
+
+[[redirects]]
+  from = "/locations/seward-park/*"
+  to = "/spots/seward-park/"
+  status = 301
+
+[[redirects]]
+  from = "/locations/magnuson-park/*"
+  to = "/spots/magnuson-park/"
+  status = 301
+
+[[redirects]]
+  from = "/locations/juanita-bay-park/*"
+  to = "/spots/juanita-bay-park/"
+  status = 301
+
+[[redirects]]
+  from = "/locations/marymoor-park/*"
+  to = "/spots/marymoor-park/"
+  status = 301
+
+[[redirects]]
+  from = "/locations/edmonds-waterfront/*"
+  to = "/spots/edmonds-marsh-waterfront/"
+  status = 301
+
+[[redirects]]
+  from = "/locations/nisqually-nwr/*"
+  to = "/spots/billy-frank-jr-nisqually-nwr/"
+  status = 301
+
+[[redirects]]
+  from = "/locations/crockett-lake/*"
+  to = "/spots/crockett-lake/"
+  status = 301
+
+[[redirects]]
+  from = "/locations/fort-ebey/*"
+  to = "/spots/fort-ebey/"
+  status = 301
+
+[[redirects]]
+  from = "/locations/dungeness-nwr/*"
+  to = "/spots/dungeness-spit/"
+  status = 301

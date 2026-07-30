@@ -1,0 +1,300 @@
+---
+import Base from '../../layouts/Base.astro';
+import locations from '../../data/locations.json';
+
+export function getStaticPaths() {
+  return locations.map((l) => ({ params: { slug: l.slug }, props: { loc: l } }));
+}
+
+const { loc } = Astro.props;
+const sorted = [...locations].sort((a, b) => a.order - b.order);
+const idx = sorted.findIndex((l) => l.slug === loc.slug);
+const upNext = [1, 2, 3].map((n) => sorted[(idx + n) % sorted.length]);
+const orderStr = String(loc.order).padStart(2, '0');
+const tierColor = { Easy: '#3fc0a8', Moderate: '#f0c67c', Strenuous: '#ef7f5e' }[loc.effortTier] ?? '#f0c67c';
+---
+<Base title={loc.name} description={loc.blurb}>
+  <div class="detail" style="animation: rise .5s ease both;">
+    <section class="hero">
+      <div class="sky"></div>
+      <div class="glow"></div>
+      <div class="bird" style="top:30%; width:24px; height:10px; animation: glide 46s linear infinite; animation-delay:-8s; opacity:.6;">
+        <span style="animation-duration:1.7s"></span><span style="animation-duration:1.7s"></span>
+      </div>
+      <div class="bird" style="top:20%; width:16px; height:7px; animation: glide 58s linear infinite; animation-delay:-30s; opacity:.45;">
+        <span style="animation-duration:2.1s"></span><span style="animation-duration:2.1s"></span>
+      </div>
+      <div class="hero-content">
+        <p class="back"><a href="/#list">← All thirteen spots</a></p>
+        <p class="mono-eyebrow eyebrow">{orderStr} · {loc.region}</p>
+        <h1>{loc.name}</h1>
+        <p class="habitat-line">{loc.habitat}</p>
+      </div>
+    </section>
+
+    <section class="facts">
+      <p class="blurb">{loc.blurb}</p>
+      <div class="fact-rows">
+        <div class="fact-row">
+          <span class="mono-label">Effort</span>
+          <span>
+            <span class="effort-line" style={`color:${tierColor}`}>{loc.effortLine}</span>
+            <span class="terrain">{loc.terrain}</span>
+          </span>
+        </div>
+        <div class="fact-row">
+          <span class="mono-label">When to go</span>
+          <span class="fact-body">{loc.when}</span>
+        </div>
+        <div class="fact-row last">
+          <span class="mono-label">Access</span>
+          <span class="fact-body">
+            {loc.access}
+            <span class="fact-links">
+              <a href={`https://www.google.com/maps/search/?api=1&query=${loc.lat},${loc.lng}`}>Directions</a>
+              <a href={`https://ebird.org/hotspot/${loc.locId}`}>eBird hotspot</a>
+            </span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-wrap">
+      <div id="minimap" data-lat={loc.lat} data-lng={loc.lng} data-name={loc.name} data-tier={tierColor}></div>
+    </section>
+
+    <section class="seasons-section">
+      <div class="section-head ruled">
+        <h2 class="big">Birds by season</h2>
+        <span class="mono-label head-note">Curated highlights · <span id="season-note-name">the current season</span> is marked</span>
+      </div>
+      <div class="seasons">
+        {loc.seasons.map((s) => (
+          <div class="season" data-season={s.season.toLowerCase()}>
+            <h3>{s.season} <span class="now-badge" hidden>Now</span></h3>
+            <ul>
+              {s.birds.map((b) => <li>{b}</li>)}
+            </ul>
+            <p class="note">{s.note}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="sightings-section">
+      <div class="section-head ruled">
+        <h2>Reported here in the last 30 days</h2>
+        <span class="mono-label live">● Live from eBird</span>
+      </div>
+      <div id="recent" data-locid={loc.locId}>
+        <p class="loading">Checking recent checklists…</p>
+      </div>
+    </section>
+
+    <section class="sources-section">
+      <div class="section-head ruled">
+        <h2>Sources</h2>
+      </div>
+      <div class="source-rows">
+        {loc.sources.map((s) => (
+          <a class="source-row" href={s.url} rel="noopener">
+            <span>{s.title}</span>
+            <span class="arrow">↗</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="upnext">
+      <h2>Up next</h2>
+      <div class="rows">
+        {upNext.map((n) => (
+          <a class="row" href={`/spots/${n.slug}/`}>
+            <span class="idx">{String(n.order).padStart(2, '0')}</span>
+            <span class="locname">{n.name}</span>
+            <span class="effort">{n.effortLine}</span>
+            <span class="arrow">→</span>
+          </a>
+        ))}
+        <div class="row-cap"></div>
+      </div>
+    </section>
+  </div>
+
+  <style define:vars={{ tierColor }}>
+    .hero { position: relative; min-height: 56vh; overflow: hidden; display: flex; align-items: flex-end; }
+    .sky {
+      position: absolute; inset: -10% -6%;
+      background: linear-gradient(172deg,
+        oklch(0.19 0.055 262) 0%,
+        oklch(0.28 0.072 250) 40%,
+        oklch(0.42 0.072 234) 72%,
+        oklch(0.60 0.062 214) 100%);
+      animation: skyDrift 52s ease-in-out infinite alternate;
+    }
+    .glow { position: absolute; inset: 0; background: radial-gradient(90% 60% at 88% 8%, rgba(255,232,196,.2), rgba(255,232,196,0) 62%); }
+    .hero-content { position: relative; padding: 124px 40px 56px; }
+    .back { margin: 0 0 22px; }
+    .back a { font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.66); text-decoration: none; }
+    .back a:hover { color: var(--accent); }
+    .eyebrow { color: rgba(255,255,255,.6); margin: 0 0 14px; }
+    h1 {
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(44px, 6.2vw, 96px);
+      line-height: .95; letter-spacing: -.015em; max-width: 20ch;
+      margin: 0 0 14px;
+    }
+    .habitat-line { font-size: 16px; color: rgba(255,255,255,.76); margin: 0; }
+
+    h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4vw, 56px); letter-spacing: -.01em; margin: 0; }
+    h2.big { font-size: clamp(38px, 4.6vw, 64px); letter-spacing: -.012em; }
+    .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; }
+    .section-head.ruled { border-bottom: 1px solid var(--rule-strong); padding-bottom: 22px; margin-bottom: 44px; }
+    .head-note { color: var(--ink-faint); }
+
+    .facts {
+      padding: 74px 40px 0;
+      display: grid; grid-template-columns: minmax(0,1.35fr) minmax(0,1fr); gap: 72px;
+    }
+    .blurb { font-family: var(--serif); font-size: clamp(22px, 2.2vw, 31px); line-height: 1.44; text-wrap: pretty; margin: 0; color: var(--ink-muted); }
+    .fact-row {
+      display: grid; grid-template-columns: 108px 1fr; gap: 18px;
+      padding: 18px 0; border-top: 1px solid var(--rule-strong);
+    }
+    .fact-row.last { border-bottom: 1px solid var(--rule-strong); }
+    .fact-row .mono-label { color: var(--ink-faint); padding-top: 3px; }
+    .effort-line { display: block; font-family: var(--mono); font-size: 12.5px; letter-spacing: .04em; margin-bottom: 6px; }
+    .terrain, .fact-body { font-size: 15px; line-height: 1.55; color: var(--ink-muted); }
+    .fact-links { display: flex; gap: 18px; margin-top: 10px; }
+    .fact-links a { font-family: var(--mono); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; }
+
+    .map-wrap { padding: 64px 40px 0; }
+    #minimap { height: 42vh; min-height: 320px; border: 1px solid var(--border); }
+
+    .seasons-section { padding: 112px 40px 0; }
+    .seasons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; }
+    .season h3 { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1; margin: 0 0 16px; }
+    .now-badge {
+      font-family: var(--mono); font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase;
+      padding: 4px 8px; background: var(--accent); color: var(--bg);
+      vertical-align: middle; margin-left: 8px;
+    }
+    .season ul { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--rule-soft); }
+    .season li { font-size: 17px; padding: 11px 0; border-top: 1px solid var(--rule-soft); }
+    .season .note { font-size: 14.5px; line-height: 1.6; color: var(--ink-dim); margin: 14px 0 0; }
+
+    .sightings-section { padding: 112px 40px 0; }
+    .live { color: var(--accent-easy); }
+    .loading { color: var(--ink-dim); }
+
+    .sources-section { padding: 112px 40px 0; }
+    .source-rows { max-width: 640px; }
+    .source-row {
+      display: flex; justify-content: space-between; gap: 20px;
+      padding: 15px 2px; border-top: 1px solid var(--rule-soft);
+      font-size: 15.5px; text-decoration: none; color: var(--ink-muted);
+      transition: padding-left .18s;
+    }
+    .source-row:last-of-type { border-bottom: 1px solid var(--rule-soft); }
+    .source-row:hover { color: var(--accent); padding-left: 12px; }
+    .source-row .arrow { font-family: var(--mono); color: var(--ink-fainter); }
+
+    .upnext { padding: 112px 0 0; }
+    .upnext h2 { padding: 0 40px 26px; }
+    .row {
+      display: grid; grid-template-columns: 62px minmax(0,2fr) 190px 46px;
+      gap: 20px; align-items: baseline; padding: 24px 40px;
+      border-top: 1px solid var(--rule); text-decoration: none;
+      transition: padding-left .18s, background .18s;
+    }
+    .row:hover { background: linear-gradient(90deg, rgba(232,238,246,.07), rgba(232,238,246,0)); padding-left: 52px; }
+    .row-cap { border-top: 1px solid var(--rule); margin-bottom: 60px; }
+    .idx { font-family: var(--mono); font-size: 13px; color: var(--ink-fainter); }
+    .locname { font-family: var(--serif); font-size: clamp(22px, 2.2vw, 32px); line-height: 1.08; }
+    .effort { font-family: var(--mono); font-size: 12.5px; color: var(--accent); }
+    .row .arrow { font-family: var(--mono); color: var(--ink-fainter); text-align: right; }
+
+    @media (max-width: 1000px) {
+      .seasons { grid-template-columns: repeat(2, 1fr); }
+      .facts { grid-template-columns: 1fr; gap: 44px; }
+    }
+    @media (max-width: 760px) {
+      .hero-content, .facts, .map-wrap, .seasons-section, .sightings-section, .sources-section { padding-left: 20px; padding-right: 20px; }
+      .upnext h2 { padding: 0 20px 26px; }
+      .row { padding: 24px 20px; grid-template-columns: 38px 1fr; grid-template-rows: auto auto; row-gap: 6px; }
+      .row .effort { grid-column: 2; }
+      .row .arrow { display: none; }
+      .seasons { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <script>
+    import L from 'leaflet';
+    import 'leaflet/dist/leaflet.css';
+
+    // Mini map
+    const mm = document.getElementById('minimap')!;
+    const lat = Number(mm.dataset.lat);
+    const lng = Number(mm.dataset.lng);
+    const map = L.map('minimap', { scrollWheelZoom: false }).setView([lat, lng], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; OpenStreetMap contributors',
+    }).addTo(map);
+    L.circleMarker([lat, lng], {
+      radius: 10, color: '#ffffff', weight: 2, fillOpacity: 1, fillColor: mm.dataset.tier!,
+    }).addTo(map).bindPopup(mm.dataset.name!);
+
+    // Mark current season
+    const m = new Date().getMonth();
+    const season = ['winter','winter','spring','spring','spring','summer','summer','summer','fall','fall','fall','winter'][m];
+    const el = document.querySelector(`.season[data-season="${season}"]`);
+    if (el) {
+      const badge = el.querySelector('.now-badge') as HTMLElement | null;
+      if (badge) badge.hidden = false;
+    }
+    const noteName = document.getElementById('season-note-name');
+    if (noteName) noteName.textContent = season.charAt(0).toUpperCase() + season.slice(1);
+
+    // Live eBird sightings
+    const recent = document.getElementById('recent')!;
+    fetch(`/api/ebird?locId=${recent.dataset.locid}`)
+      .then((r) => { if (!r.ok) throw new Error(); return r.json(); })
+      .then((obs: any[]) => {
+        if (!obs.length) {
+          recent.innerHTML = '<p class="loading">No checklists reported here in the last 30 days. The seasonal lists above still apply.</p>';
+          return;
+        }
+        const sorted = [...obs].sort((a, b) => (a.date < b.date ? 1 : -1));
+        const top = sorted.slice(0, 22);
+        const rows = top.map((o) => `
+          <div class="s-row">
+            <span class="s-name">${o.name}</span>
+            <span class="s-count">${o.count ?? '—'}</span>
+            <span class="s-date">${o.date.slice(0, 10)}</span>
+          </div>`).join('');
+        recent.innerHTML = `
+          <div class="s-lead">
+            <span class="s-fig">${obs.length}</span>
+            <span class="s-caption">species reported by birders at this location in the last 30 days. Most recent checklists first.</span>
+          </div>
+          <div class="s-cols">${rows}</div>
+          <p class="s-attr">Counts are from each species' most recent report · Data from eBird, Cornell Lab of Ornithology</p>
+          <style>
+            .s-lead { display: flex; align-items: baseline; gap: 26px; margin-bottom: 34px; flex-wrap: wrap; }
+            .s-fig { font-family: var(--serif); font-size: clamp(44px, 5vw, 68px); color: var(--accent); line-height: 1; }
+            .s-caption { font-size: 16px; max-width: 46ch; color: var(--ink-muted); }
+            .s-cols { columns: 2; column-gap: 64px; }
+            .s-row { display: grid; grid-template-columns: 1fr 56px 104px; gap: 16px; padding: 13px 2px; border-top: 1px solid var(--rule-soft); break-inside: avoid; }
+            .s-name { font-size: 16px; color: rgba(232,238,246,.9); }
+            .s-count { font-family: var(--mono); font-size: 13px; color: var(--accent); text-align: right; font-variant-numeric: tabular-nums; }
+            .s-date { font-family: var(--mono); font-size: 12px; color: var(--ink-faint); text-align: right; font-variant-numeric: tabular-nums; }
+            .s-attr { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; color: var(--ink-fainter); margin-top: 26px; }
+            @media (max-width: 1000px) { .s-cols { columns: 1; } }
+          </style>`;
+      })
+      .catch(() => {
+        recent.innerHTML = '<p class="loading">Live sightings are unavailable right now. The seasonal lists above still apply.</p>';
+      });
+  </script>
+</Base>

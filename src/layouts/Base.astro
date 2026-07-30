@@ -1,84 +1,162 @@
 ---
 const { title, description } = Astro.props;
+const seasonNames = ['Winter', 'Winter', 'Spring', 'Spring', 'Spring', 'Summer', 'Summer', 'Summer', 'Fall', 'Fall', 'Fall', 'Winter'];
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title ? `${title} · Puget Sound Birding` : 'Puget Sound Birding'}</title>
-    <meta name="description" content={description ?? 'Where to go bird watching around Puget Sound: maps, seasonal birds, and honest effort ratings.'} />
+    <title>{title ? `${title} · PNW Birding` : 'PNW Birding'}</title>
+    <meta name="description" content={description ?? 'Where to go bird watching around Puget Sound: thirteen proven spots with seasonal birds, real distances, and live sightings.'} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="preload" href="/fonts/InstrumentSerif-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/IBMPlexSans-300.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/IBMPlexMono-400.woff2" as="font" type="font/woff2" crossorigin />
     <style is:global>
+      @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/InstrumentSerif-400.woff2') format('woff2'); }
+      @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap; src: url('/fonts/InstrumentSerif-400i.woff2') format('woff2'); }
+      @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 300; font-display: swap; src: url('/fonts/IBMPlexSans-300.woff2') format('woff2'); }
+      @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/IBMPlexSans-400.woff2') format('woff2'); }
+      @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/IBMPlexSans-500.woff2') format('woff2'); }
+      @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/IBMPlexMono-400.woff2') format('woff2'); }
+      @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/IBMPlexMono-500.woff2') format('woff2'); }
+
       :root {
-        --ink: #1f2a24;
-        --ink-soft: #51625a;
-        --paper: #f7f6f1;
-        --card: #ffffff;
-        --accent: #2f6b4f;
-        --accent-soft: #e3eee8;
-        --line: #dcded6;
-        --amber: #b98134;
+        --bg: #0d1522;
+        --surface: #101a2b;
+        --ink: #e8eef6;
+        --ink-muted: rgba(232,238,246,.82);
+        --ink-dim: #8d9db4;
+        --ink-faint: #7f8fa6;
+        --ink-fainter: #6d7c92;
+        --accent: #f0c67c;
+        --accent-easy: #3fc0a8;
+        --accent-hard: #ef7f5e;
+        --rule: rgba(232,238,246,.13);
+        --rule-strong: rgba(232,238,246,.16);
+        --rule-soft: rgba(232,238,246,.11);
+        --border: rgba(232,238,246,.14);
+        --map-bg: #cfe4ea;
+        --serif: 'Instrument Serif', Georgia, serif;
+        --sans: 'IBM Plex Sans', -apple-system, sans-serif;
+        --mono: 'IBM Plex Mono', ui-monospace, monospace;
       }
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body {
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        background: var(--paper);
+        background: var(--bg);
         color: var(--ink);
+        font-family: var(--sans);
+        font-weight: 300;
         line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
       }
-      a { color: var(--accent); }
-      .wrap { max-width: 980px; margin: 0 auto; padding: 0 1.25rem; }
+      a { color: var(--ink); }
+      a:hover { color: var(--accent); }
+      ::selection { background: var(--accent); color: var(--bg); }
+
+      .mono-label { font-family: var(--mono); font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; }
+      .mono-eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: .22em; text-transform: uppercase; }
+
       header.site {
-        background: var(--accent);
-        color: #fff;
-        padding: 1rem 0;
+        position: fixed; inset: 0 0 auto 0; z-index: 60;
+        display: flex; align-items: baseline; gap: 20px;
+        padding: 18px 40px;
+        background: linear-gradient(180deg, rgba(13,21,34,.92), rgba(13,21,34,0));
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
       }
-      header.site .wrap { display: flex; align-items: baseline; gap: 0.75rem; flex-wrap: wrap; }
-      header.site a.brand {
-        color: #fff; text-decoration: none; font-weight: 700; font-size: 1.25rem; letter-spacing: 0.01em;
+      header.site .wordmark { font-family: var(--serif); font-size: 22px; letter-spacing: .01em; text-decoration: none; }
+      header.site .tagline { font-family: var(--mono); font-size: 11px; letter-spacing: .18em; color: var(--ink-faint); }
+      header.site .spacer { flex: 1; }
+      header.site .status { font-family: var(--mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-faint); }
+
+      .footer-line {
+        display: flex; justify-content: space-between; gap: 20px;
+        padding: 26px 40px 40px;
+        font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+        color: var(--ink-fainter);
       }
-      header.site span.tag { color: #cfe3d8; font-size: 0.9rem; }
-      main { padding: 1.5rem 0 3rem; }
-      footer.site {
-        border-top: 1px solid var(--line);
-        padding: 1.5rem 0 2.5rem;
-        color: var(--ink-soft);
-        font-size: 0.85rem;
+      .attribution {
+        padding: 0 40px 34px;
+        font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em;
+        color: var(--ink-fainter); line-height: 1.9;
       }
-      footer.site p { margin: 0.35rem 0; }
-      h1 { font-size: 1.7rem; margin: 0.5rem 0 0.25rem; }
-      h2 { font-size: 1.2rem; margin: 1.75rem 0 0.5rem; }
-      .muted { color: var(--ink-soft); }
+      .attribution a { color: var(--ink-fainter); }
+      .attribution a:hover { color: var(--accent); }
+
+      /* Leaflet frame styling */
+      .leaflet-container { background: var(--map-bg) !important; font-family: var(--sans) !important; }
+      .leaflet-popup-content-wrapper {
+        background: var(--surface) !important; color: var(--ink) !important;
+        border-radius: 2px !important; box-shadow: 0 18px 50px rgba(0,0,0,.5) !important;
+      }
+      .leaflet-popup-tip { background: var(--surface) !important; }
+      .leaflet-popup-content { margin: 16px 18px !important; }
+      .leaflet-container a.leaflet-popup-close-button { color: var(--ink-faint) !important; }
+
+      @keyframes skyDrift { 0% { transform: translate3d(-4%,0,0) scale(1.1); } 100% { transform: translate3d(4%,2%,0) scale(1.14); } }
+      @keyframes glide { 0% { transform: translate3d(0,0,0); opacity: 0; } 8% { opacity: .85; } 88% { opacity: .7; } 100% { transform: translate3d(78vw,-16vh,0); opacity: 0; } }
+      @keyframes flapL { 0%,100% { transform: rotate(-27deg); } 50% { transform: rotate(-5deg); } }
+      @keyframes flapR { 0%,100% { transform: rotate(27deg); } 50% { transform: rotate(5deg); } }
+      @keyframes rowFlash { from { background: rgba(240,198,124,.22); } to { background: rgba(240,198,124,0); } }
+      @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+
+      .bird { position: absolute; pointer-events: none; }
+      .bird span {
+        position: absolute; top: 0; height: 1.4px; width: 52%; background: #fff; border-radius: 2px;
+      }
+      .bird span:first-child { left: 0; transform-origin: right center; animation: flapL 1.6s ease-in-out infinite; }
+      .bird span:last-child { right: 0; transform-origin: left center; animation: flapR 1.6s ease-in-out infinite; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .sky, .bird { animation: none !important; }
+        .bird span { animation: none !important; }
+        html { scroll-behavior: auto; }
+      }
+
+      @media (max-width: 760px) {
+        header.site { padding: 18px 20px; }
+        header.site .tagline { display: none; }
+        .footer-line, .attribution { padding-left: 20px; padding-right: 20px; }
+      }
     </style>
   </head>
   <body>
     <header class="site">
-      <div class="wrap">
-        <a class="brand" href="/">Puget Sound Birding</a>
-        <span class="tag">where to go, what you'll see, how far you'll walk</span>
-      </div>
+      <a class="wordmark" href="/">PNW Birding</a>
+      <span class="tagline">where to go · what you'll see · how far you'll walk</span>
+      <span class="spacer"></span>
+      <span class="status" id="header-status">13 spots</span>
     </header>
-    <main>
-      <div class="wrap">
-        <slot />
-      </div>
-    </main>
-    <footer class="site">
-      <div class="wrap">
-        <p>
-          Live sighting data from <a href="https://ebird.org">eBird</a>, Cornell Lab of Ornithology.
-          Location research draws on <a href="https://www.wta.org/go-outside/seasonal-hikes/year-round-destinations/bird-watching-hikes-in-washington">Washington Trails Association</a>,
-          <a href="https://www.eastsideaudubon.org/">Eastside Audubon</a>,
-          <a href="https://birdsconnectsea.org/">Birds Connect Seattle</a>,
-          <a href="https://wos.org/birding-resources/maps/">Washington Ornithological Society</a>,
-          and <a href="https://www.birdful.org/where-can-i-go-birdwatching-in-seattle/">Birdful</a>.
-          Each location page lists its specific sources.
-        </p>
-        <p>Map tiles © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
-      </div>
-    </footer>
+
+    <slot />
+
+    <div class="attribution">
+      Live sighting data from <a href="https://ebird.org">eBird</a>, Cornell Lab of Ornithology ·
+      Location research: <a href="https://www.wta.org/go-outside/seasonal-hikes/year-round-destinations/bird-watching-hikes-in-washington">Washington Trails Association</a>,
+      <a href="https://www.eastsideaudubon.org/">Eastside Audubon</a>,
+      <a href="https://birdsconnectsea.org/">Birds Connect Seattle</a>,
+      <a href="https://wos.org/birding-resources/maps/">Washington Ornithological Society</a>,
+      <a href="https://www.birdful.org/where-can-i-go-birdwatching-in-seattle/">Birdful</a> ·
+      Map tiles © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors
+    </div>
+    <div class="footer-line">
+      <span>Photographs · Ryan Hoffman</span>
+      <span>pnwbirding.longwalkhome.net</span>
+    </div>
+
+    <script is:inline>
+      (function () {
+        var m = new Date().getMonth();
+        var season = ['Winter','Winter','Spring','Spring','Spring','Summer','Summer','Summer','Fall','Fall','Fall','Winter'][m];
+        var el = document.getElementById('header-status');
+        if (el) el.textContent = season + ' · 13 spots';
+        document.documentElement.dataset.season = season.toLowerCase();
+      })();
+    </script>
   </body>
 </html>

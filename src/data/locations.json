@@ -1,320 +1,934 @@
 [
   {
-    "slug": "union-bay-natural-area",
-    "name": "Union Bay Natural Area (Montlake Fill)",
-    "locId": "L162766",
-    "lat": 47.6542,
-    "lng": -122.2914,
-    "region": "Seattle",
-    "habitat": "Wetland, marsh, meadow, lakeshore",
-    "pass": "Free. Street parking or UW parking (fee on weekdays).",
-    "effort": {
-      "distance": "1.5 mile loop",
-      "gain": "Flat (about 10 ft)",
-      "terrain": "Gravel paths, level the whole way",
-      "rating": "Easy"
-    },
-    "bestTime": "Early morning, any season. Shorebird viewing is best late summer when water levels drop.",
-    "snippet": "Seattle's most-birded patch, a restored landfill on Lake Washington next to the UW campus with over 260 species recorded. Ponds, marsh, and meadow are packed into a flat, easy loop, and something is always happening: rails muttering in the cattails, eagles working the bay, and a steady parade of local birders happy to share what's around. Reachable by light rail.",
-    "seasons": {
-      "spring": { "birds": ["Yellow-headed Blackbird", "Cinnamon Teal", "Tree Swallow", "Common Yellowthroat", "Wilson's Warbler", "Rufous Hummingbird"], "note": "Songbird migration and nesting waterfowl; swallows swarm the ponds." },
-      "summer": { "birds": ["Green Heron", "Wood Duck", "Willow Flycatcher", "Cedar Waxwing", "Osprey", "American Goldfinch"], "note": "Broods of ducklings on the ponds; watch for Green Herons at dawn." },
-      "fall": { "birds": ["Least Sandpiper", "Long-billed Dowitcher", "Lincoln's Sparrow", "American Pipit", "Greater White-fronted Goose"], "note": "Mudflat edges pull in shorebirds; sparrows move through the meadows." },
-      "winter": { "birds": ["Northern Shoveler", "Ring-necked Duck", "Trumpeter Swan", "Bald Eagle", "Virginia Rail", "Marsh Wren"], "note": "Big waterfowl numbers on the bay and ponds." }
-    },
+    "slug": "crockett-lake",
+    "name": "Crockett Lake",
+    "region": "Whidbey Island",
+    "habitat": "Brackish lagoon, wet pasture, beach",
+    "effortLine": "Easy · roadside viewing",
+    "effortTier": "Easy",
+    "terrain": "Road shoulders and pullouts along SR 20; a scope does the walking.",
+    "when": "July through September for shorebirds; winter for raptors. Pair it with the Coupeville ferry and Fort Casey.",
+    "access": "Free pullouts. Discover Pass if you park at Fort Casey next door.",
+    "blurb": "A shallow lagoon beside the Coupeville ferry landing that is, acre for acre, the best shorebird spot on this list. Pull off the highway, set up a scope, and let the birds come to you: sandpipers and plovers on the flats, falcons and harriers never far behind.",
+    "lat": 48.1667,
+    "lng": -122.65,
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Black-bellied Plover",
+          "Whimbrel",
+          "Caspian Tern",
+          "Northern Harrier"
+        ],
+        "note": "Northbound shorebirds pass through fast."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Western Sandpiper",
+          "Least Sandpiper",
+          "Short-billed Dowitcher",
+          "Peregrine Falcon"
+        ],
+        "note": "Fall shorebird migration starts by early July."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Pectoral Sandpiper",
+          "American Golden-Plover (rare)",
+          "Merlin",
+          "American Pipit"
+        ],
+        "note": "Rarity season; scan every flock."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Short-eared Owl",
+          "Rough-legged Hawk",
+          "Trumpeter Swan",
+          "Bald Eagle"
+        ],
+        "note": "Raptors work the wet fields at dusk."
+      }
+    ],
+    "order": 1,
+    "locId": "L109534",
     "sources": [
-      { "title": "UW Botanic Gardens: Union Bay Natural Area", "url": "https://botanicgardens.uw.edu/center-for-urban-horticulture/visit/union-bay-natural-area/" },
-      { "title": "WTA: Bird Watching Hikes in Washington", "url": "https://www.wta.org/go-outside/seasonal-hikes/year-round-destinations/bird-watching-hikes-in-washington" },
-      { "title": "eBird hotspot", "url": "https://ebird.org/hotspot/L162766" }
-    ]
-  },
-  {
-    "slug": "discovery-park",
-    "name": "Discovery Park",
-    "locId": "L128530",
-    "lat": 47.6639,
-    "lng": -122.4215,
-    "region": "Seattle",
-    "habitat": "Forest, bluff meadow, beach, saltwater",
-    "pass": "Free. Limited beach-lot passes available at the visitor center.",
-    "effort": {
-      "distance": "2.8 mile loop; add about 1.5 miles round trip to West Point beach",
-      "gain": "About 300 ft if you drop to the beach",
-      "terrain": "Well-kept dirt and paved trails; the climb back from the beach is a real hill",
-      "rating": "Moderate"
-    },
-    "bestTime": "Morning for forest and meadow birds; any daylight hour works for seawatching at West Point, and winter is prime for it.",
-    "snippet": "Seattle's largest park, 534 acres of forest, open bluff meadows, and a lighthouse point jutting into Puget Sound, with nearly 300 species on the list. You can bird three habitats in one walk: chickadee and creeper flocks in the woods, raptors and sparrows on the bluffs, and loons, grebes, and sea ducks off West Point. It feels far wilder than a city park has any right to.",
-    "seasons": {
-      "spring": { "birds": ["Rufous Hummingbird", "Orange-crowned Warbler", "Pacific-slope Flycatcher", "Caspian Tern", "Savannah Sparrow"], "note": "Migrants drop into the forest edges; terns return to the Sound." },
-      "summer": { "birds": ["Pigeon Guillemot", "Purple Martin", "Swainson's Thrush", "Willow Flycatcher", "Rhinoceros Auklet"], "note": "Guillemots and auklets fish off West Point; martins use the snags." },
-      "fall": { "birds": ["Heermann's Gull", "Parasitic Jaeger", "Surf Scoter", "Fox Sparrow", "Golden-crowned Sparrow"], "note": "Seawatching picks up; sparrows flood the meadows." },
-      "winter": { "birds": ["Red-throated Loon", "Horned Grebe", "Harlequin Duck", "Long-tailed Duck", "Brant", "Varied Thrush"], "note": "The best season at West Point: loons, grebes, and sea ducks close to shore." }
-    },
-    "sources": [
-      { "title": "Seattle Parks: Discovery Park", "url": "https://www.seattle.gov/parks/allparks/discovery-park" },
-      { "title": "BirdWeb (Birds Connect Seattle)", "url": "https://www.birdweb.org" },
-      { "title": "eBird hotspot", "url": "https://ebird.org/hotspot/L128530" }
-    ]
-  },
-  {
-    "slug": "seward-park",
-    "name": "Seward Park",
-    "locId": "L195645",
-    "lat": 47.5538,
-    "lng": -122.2501,
-    "region": "Seattle",
-    "habitat": "Old-growth forest, lakeshore",
-    "pass": "Free parking at the park.",
-    "effort": {
-      "distance": "2.4 mile perimeter loop",
-      "gain": "Flat on the paved loop; interior forest trails climb gently",
-      "terrain": "Paved, stroller-friendly shoreline path; soft dirt trails through the forest",
-      "rating": "Easy"
-    },
-    "bestTime": "Early morning for forest birds; dusk in late summer for Barred Owls. Winter mornings for lake waterfowl.",
-    "snippet": "A peninsula of genuine old-growth forest sticking into Lake Washington, home to some of the biggest trees left in Seattle. This is the place for forest birds: Barred Owls are seen regularly, Pileated Woodpeckers drum from the big firs, and Bald Eagles nest here every year. The flat paved loop around the shoreline makes it one of the most relaxed birding walks in the city, and the Seward Park Audubon Center runs regular guided walks.",
-    "seasons": {
-      "spring": { "birds": ["Bald Eagle", "Pileated Woodpecker", "Brown Creeper", "Wilson's Warbler", "Western Tanager"], "note": "Eagles on the nest; dawn chorus in the old growth is superb." },
-      "summer": { "birds": ["Barred Owl", "Swainson's Thrush", "Black-throated Gray Warbler", "Purple Martin", "Caspian Tern"], "note": "Listen for young Barred Owls begging at dusk." },
-      "fall": { "birds": ["Varied Thrush", "Golden-crowned Kinglet", "Red-breasted Sapsucker", "Common Loon"], "note": "Thrushes and kinglets move back down into the lowland forest." },
-      "winter": { "birds": ["Common Merganser", "Common Goldeneye", "Hooded Merganser", "Varied Thrush", "Hutton's Vireo"], "note": "Rafts of divers off the point; quiet forest full of mixed flocks." }
-    },
-    "sources": [
-      { "title": "Seattle Parks: Seward Park", "url": "https://www.seattle.gov/parks/allparks/seward-park" },
-      { "title": "Greater Seattle on the Cheap: Bird watching in the Puget Sound region", "url": "https://www.greaterseattleonthecheap.com/bird-watching-in-the-puget-sound-region/" },
-      { "title": "eBird hotspot", "url": "https://ebird.org/hotspot/L195645" }
-    ]
-  },
-  {
-    "slug": "magnuson-park",
-    "name": "Magnuson Park",
-    "locId": "L269461",
-    "lat": 47.6815,
-    "lng": -122.2505,
-    "region": "Seattle",
-    "habitat": "Restored wetland ponds, meadow, lakeshore",
-    "pass": "Free.",
-    "effort": {
-      "distance": "1 to 3 miles of flat wandering, your choice",
-      "gain": "Essentially flat",
-      "terrain": "Wide gravel and paved paths through the wetland complex",
-      "rating": "Easy"
-    },
-    "bestTime": "Morning; the wetland ponds are liveliest early. Winter brings the most waterfowl variety.",
-    "snippet": "A former naval air station reborn as a chain of wetland ponds and meadows along Lake Washington, now one of north Seattle's richest bird spots with about 225 species recorded. The pond loop delivers close views of teal, herons, and marsh wrens, the meadows hold sparrows and raptors, and the swimming-beach shoreline turns up loons and grebes in winter. Easy, flat, and great for a quick session.",
-    "seasons": {
-      "spring": { "birds": ["Cinnamon Teal", "Virginia Rail", "Common Yellowthroat", "Savannah Sparrow", "Violet-green Swallow"], "note": "The ponds fill with nesting activity; rails call from the reeds." },
-      "summer": { "birds": ["Green Heron", "Willow Flycatcher", "Lazuli Bunting", "American Goldfinch", "Osprey"], "note": "Buntings have summered in the meadows; goldfinches everywhere." },
-      "fall": { "birds": ["Lincoln's Sparrow", "Fox Sparrow", "American Pipit", "Merlin", "Green-winged Teal"], "note": "Sparrow flocks build; Merlins hunt the meadows." },
-      "winter": { "birds": ["Common Loon", "Horned Grebe", "Bufflehead", "Ring-necked Duck", "Short-eared Owl (rare)"], "note": "Scan the lake from the beach; ducks pack the ponds." }
-    },
-    "sources": [
-      { "title": "Seattle Parks: Magnuson Park", "url": "https://www.seattle.gov/parks/allparks/magnuson-park" },
-      { "title": "eBird hotspot", "url": "https://ebird.org/hotspot/L269461" }
+      {
+        "title": "Whidbey Audubon Society",
+        "url": "https://whidbeyaudubon.org"
+      },
+      {
+        "title": "WOS: Washington birding maps",
+        "url": "https://wos.org/birding-resources/maps/"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L109534"
+      }
     ]
   },
   {
     "slug": "juanita-bay-park",
+    "order": 2,
     "name": "Juanita Bay Park",
+    "region": "Kirkland",
+    "habitat": "Boardwalk, cattail marsh, bay",
+    "effortLine": "Easy · 1 mi boardwalk",
+    "effortTier": "Easy",
+    "terrain": "Paved and boardwalk, fully level and stroller-friendly.",
+    "when": "Any time of day — the boardwalk faces east, so late afternoon light is kindest.",
+    "access": "Free lot off Market Street. Restrooms on site.",
+    "blurb": "A short boardwalk out over a cattail marsh, which is a very efficient way to be close to birds without walking far. Beavers, turtles on the logs, and herons standing in the shallows about ten feet from the railing.",
+    "lat": 47.705,
+    "lng": -122.21,
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Marsh Wren",
+          "Virginia Rail",
+          "Purple Martin",
+          "Osprey"
+        ],
+        "note": "Martins take the boxes; osprey rebuild the platform."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Green Heron",
+          "Wood Duck",
+          "Cedar Waxwing",
+          "Willow Flycatcher"
+        ],
+        "note": "Herons fish within feet of the boardwalk rail."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Pied-billed Grebe",
+          "Hooded Merganser",
+          "Great Egret (rare)",
+          "Bushtit"
+        ],
+        "note": "Grebes and mergansers return to the bay."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "American Wigeon",
+          "Bufflehead",
+          "Barrow's Goldeneye",
+          "Bald Eagle"
+        ],
+        "note": "Goldeneye and wigeon raft off the point."
+      }
+    ],
     "locId": "L232479",
-    "lat": 47.6982,
-    "lng": -122.2102,
-    "region": "Eastside",
-    "habitat": "Freshwater wetland, lily-pad bay, boardwalks",
-    "pass": "Free parking on Market Street.",
-    "effort": {
-      "distance": "Under 1 mile of boardwalks and paved path",
-      "gain": "Flat",
-      "terrain": "Boardwalks and paved causeway; fully accessible",
-      "rating": "Easy"
-    },
-    "bestTime": "Morning light is beautiful on the bay; good at any hour. Eastside Audubon leads regular walks here.",
-    "snippet": "Kirkland's wetland showpiece: boardwalks reach out over a lily-pad bay on Lake Washington where Wood Ducks, herons, and turtles go about their business at close range. It may be the best spot in the region for effortless, close-up wetland birding, which is why Eastside Audubon uses it for interpretive walks and evening bird outings. Bring binoculars, but honestly you barely need them.",
-    "seasons": {
-      "spring": { "birds": ["Wood Duck", "Virginia Rail", "Marsh Wren", "Tree Swallow", "Rufous Hummingbird"], "note": "Wood Ducks pair up; the marsh is loud with wrens." },
-      "summer": { "birds": ["Green Heron", "Wood Duck", "Cedar Waxwing", "Willow Flycatcher", "Pied-billed Grebe"], "note": "Grebe and duck broods weave through the lily pads." },
-      "fall": { "birds": ["Green-winged Teal", "American Wigeon", "Wilson's Snipe", "Fox Sparrow"], "note": "Dabbling ducks return in numbers." },
-      "winter": { "birds": ["Northern Pintail", "American Coot", "Hooded Merganser", "Bald Eagle", "Great Blue Heron"], "note": "Hundreds of waterfowl in the bay; eagles perch in the cottonwoods." }
-    },
     "sources": [
-      { "title": "Eastside Audubon Society", "url": "https://www.eastsideaudubon.org/" },
-      { "title": "City of Kirkland Parks", "url": "https://www.kirklandwa.gov" },
-      { "title": "eBird hotspot", "url": "https://ebird.org/hotspot/L232479" }
+      {
+        "title": "Eastside Audubon Society",
+        "url": "https://www.eastsideaudubon.org/"
+      },
+      {
+        "title": "City of Kirkland Parks",
+        "url": "https://www.kirklandwa.gov"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L232479"
+      }
+    ]
+  },
+  {
+    "slug": "edmonds-marsh-waterfront",
+    "order": 3,
+    "name": "Edmonds Marsh & Waterfront",
+    "region": "Edmonds",
+    "habitat": "Saltmarsh, pier, open Sound",
+    "effortLine": "Easy · 1.2 mi, two stops",
+    "effortTier": "Easy",
+    "terrain": "Level sidewalk and viewing platforms; the marsh loop is short.",
+    "when": "High tide pushes birds close on the water; the marsh is good all day.",
+    "access": "Free. Paid lots near the ferry terminal. Walkable from the Sounder station.",
+    "blurb": "Two habitats a five-minute walk apart: a saltmarsh with rails and raptors, and a fishing pier that puts you out over the Sound with the scoters and loons. The best cold-weather half-day on this list if you don't want to commit to a hike.",
+    "lat": 47.81,
+    "lng": -122.383,
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Savannah Sparrow",
+          "Caspian Tern",
+          "Rhinoceros Auklet",
+          "Purple Martin"
+        ],
+        "note": "Alcids move north past the pier; the marsh greens up."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Pigeon Guillemot",
+          "Osprey",
+          "Heermann’s Gull",
+          "Belted Kingfisher"
+        ],
+        "note": "Guillemots nest under the ferry dock."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Red-necked Grebe",
+          "Pacific Loon",
+          "Peregrine Falcon",
+          "Marsh Wren"
+        ],
+        "note": "Loons and grebes reappear on the Sound."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Long-tailed Duck",
+          "Harlequin Duck",
+          "Common Murre",
+          "Northern Harrier"
+        ],
+        "note": "The best sea-duck watching in the county."
+      }
+    ],
+    "locId": "L374382",
+    "sources": [
+      {
+        "title": "City of Edmonds",
+        "url": "https://www.edmondswa.gov"
+      },
+      {
+        "title": "eBird hotspot: Edmonds Waterfront",
+        "url": "https://ebird.org/hotspot/L374382"
+      },
+      {
+        "title": "eBird hotspot: Edmonds Marsh",
+        "url": "https://ebird.org/hotspot/L374380"
+      }
+    ]
+  },
+  {
+    "slug": "union-bay-natural-area",
+    "order": 4,
+    "name": "Union Bay Natural Area (Montlake Fill)",
+    "region": "Seattle",
+    "habitat": "Wetland, marsh, meadow, lakeshore",
+    "effortLine": "Easy · 1.5 mi loop",
+    "effortTier": "Easy",
+    "terrain": "Gravel paths, level the whole way (about 10 ft gain).",
+    "when": "Early morning, any season. Shorebirding is best in late summer as water levels drop.",
+    "access": "Free. Street parking or UW lots (fee on weekdays). Reachable by light rail.",
+    "blurb": "Seattle's most-birded patch: a restored landfill on Lake Washington beside the UW campus with more than 260 species recorded. Ponds, marsh, and meadow packed into a flat, easy loop, and something is always happening — rails muttering in the cattails, eagles working the bay, a steady parade of local birders happy to share what's around.",
+    "lat": 47.6553,
+    "lng": -122.2925,
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Yellow-headed Blackbird",
+          "Cinnamon Teal",
+          "Tree Swallow",
+          "Common Yellowthroat"
+        ],
+        "note": "Marsh fills with song; teal and swallows arrive."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Green Heron",
+          "Wood Duck",
+          "Willow Flycatcher",
+          "Virginia Rail"
+        ],
+        "note": "Rails call from the cattails at dawn."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Least Sandpiper",
+          "Long-billed Dowitcher",
+          "Lincoln's Sparrow",
+          "American Pipit"
+        ],
+        "note": "Mudflats emerge — the best shorebirding of the year."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Northern Shoveler",
+          "Ring-necked Duck",
+          "Trumpeter Swan",
+          "Merlin"
+        ],
+        "note": "Ponds crowd with wintering ducks and swans."
+      }
+    ],
+    "locId": "L162766",
+    "sources": [
+      {
+        "title": "UW Botanic Gardens: Union Bay Natural Area",
+        "url": "https://botanicgardens.uw.edu/center-for-urban-horticulture/visit/union-bay-natural-area/"
+      },
+      {
+        "title": "WTA: Bird Watching Hikes in Washington",
+        "url": "https://www.wta.org/go-outside/seasonal-hikes/year-round-destinations/bird-watching-hikes-in-washington"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L162766"
+      }
+    ]
+  },
+  {
+    "slug": "magnuson-park",
+    "order": 5,
+    "name": "Magnuson Park",
+    "region": "Seattle",
+    "habitat": "Restored wetland, shrub, shoreline",
+    "effortLine": "Easy · 2 mi wander",
+    "effortTier": "Easy",
+    "terrain": "Paved and packed gravel, gentle grades.",
+    "when": "Morning. Spring migration is the headline here.",
+    "access": "Free. Large lots. Frequent bus service.",
+    "blurb": "A former naval air station now stitched with constructed ponds and thickets, which turns out to be exactly what migrating sparrows and warblers want. Loud with song in May and pleasantly empty on winter mornings.",
+    "lat": 47.68,
+    "lng": -122.257,
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Yellow Warbler",
+          "Wilson's Warbler",
+          "Western Tanager",
+          "Rufous Hummingbird"
+        ],
+        "note": "Peak migration — warblers and tanagers in the thickets."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Purple Martin",
+          "Osprey",
+          "Cliff Swallow",
+          "Bullock’s Oriole (rare)"
+        ],
+        "note": "Martins over the ponds, swallows over the meadow."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "White-throated Sparrow",
+          "Palm Warbler",
+          "Merlin",
+          "Cackling Goose"
+        ],
+        "note": "Sparrows flood the shrub-steppe plantings."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Short-eared Owl (rare)",
+          "Northern Shrike",
+          "Common Goldeneye",
+          "Anna’s Hummingbird"
+        ],
+        "note": "Open grass draws shrikes and hunting raptors."
+      }
+    ],
+    "locId": "L269461",
+    "sources": [
+      {
+        "title": "Seattle Parks: Magnuson Park",
+        "url": "https://www.seattle.gov/parks/allparks/magnuson-park"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L269461"
+      }
+    ]
+  },
+  {
+    "slug": "seward-park",
+    "order": 6,
+    "name": "Seward Park",
+    "region": "Seattle",
+    "habitat": "Old-growth forest, lakeshore",
+    "effortLine": "Easy · 2.4 mi perimeter",
+    "effortTier": "Easy",
+    "terrain": "Paved perimeter loop, level; forest trails climb modestly.",
+    "when": "Dawn for the forest birds; the loop is busy with joggers by nine.",
+    "access": "Free lots. Restrooms and a café at the entrance.",
+    "blurb": "A peninsula of genuine old growth inside city limits — big Douglas-firs, pileateds hammering somewhere above you, and eagles nesting where the trail meets the water. Do the forest first, then walk the shoreline for grebes.",
+    "lat": 47.551,
+    "lng": -122.253,
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Pacific-slope Flycatcher",
+          "Black-throated Gray Warbler",
+          "Swainson’s Thrush",
+          "Warbling Vireo"
+        ],
+        "note": "Flycatchers and vireos fill the old growth."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Pileated Woodpecker",
+          "Band-tailed Pigeon",
+          "Osprey",
+          "Brown Creeper"
+        ],
+        "note": "Pileateds work the big snags; osprey overhead."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Varied Thrush",
+          "Golden-crowned Kinglet",
+          "Hutton’s Vireo",
+          "Red-breasted Sapsucker"
+        ],
+        "note": "Thrushes and kinglets drop into the understory."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Barred Owl",
+          "Horned Grebe",
+          "Bald Eagle",
+          "Bufflehead"
+        ],
+        "note": "Owls call before dawn; grebes offshore."
+      }
+    ],
+    "locId": "L195645",
+    "sources": [
+      {
+        "title": "Seattle Parks: Seward Park",
+        "url": "https://www.seattle.gov/parks/allparks/seward-park"
+      },
+      {
+        "title": "Greater Seattle on the Cheap: Bird watching in the Puget Sound region",
+        "url": "https://www.greaterseattleonthecheap.com/bird-watching-in-the-puget-sound-region/"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L195645"
+      }
     ]
   },
   {
     "slug": "marymoor-park",
+    "order": 7,
     "name": "Marymoor Park",
+    "region": "Redmond",
+    "habitat": "Riparian woods, meadow, slough",
+    "effortLine": "Easy · 2.5 mi out and back",
+    "effortTier": "Easy",
+    "terrain": "Flat gravel and boardwalk; can be muddy after rain.",
+    "when": "Very early — this is a busy park. Dawn chorus in June is the reason to come.",
+    "access": "$1 parking. Restrooms on site.",
+    "blurb": "Behind the dog park and the cricket pitch there's a cottonwood bottomland along the Sammamish Slough that produces an outsized species list. The boardwalk to the lake is where most of it happens.",
+    "lat": 47.658,
+    "lng": -122.118,
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Yellow-breasted Chat (rare)",
+          "Bullock’s Oriole",
+          "Lazuli Bunting",
+          "Vaux’s Swift"
+        ],
+        "note": "Orioles and buntings in the cottonwood edge."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Willow Flycatcher",
+          "Cedar Waxwing",
+          "Green Heron",
+          "Purple Finch"
+        ],
+        "note": "Dawn chorus in the bottomland is the reason to come."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Lincoln’s Sparrow",
+          "Wilson’s Snipe",
+          "Red-tailed Hawk",
+          "Fox Sparrow"
+        ],
+        "note": "Sparrows and snipe in the wet meadow."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Northern Shrike",
+          "Western Meadowlark",
+          "Great Horned Owl",
+          "Ruby-crowned Kinglet"
+        ],
+        "note": "Meadowlark and shrike out in the open field."
+      }
+    ],
     "locId": "L351484",
-    "lat": 47.6613,
-    "lng": -122.1184,
-    "region": "Eastside",
-    "habitat": "River slough, wet meadow, cottonwood forest",
-    "pass": "County parking fee (pay station), currently a few dollars per day.",
-    "effort": {
-      "distance": "Bird Loop is about 2 miles; up to 4 miles of flat trails",
-      "gain": "Flat",
-      "terrain": "Gravel paths and boardwalk along the Sammamish Slough",
-      "rating": "Easy"
-    },
-    "bestTime": "Early morning before the park gets busy. A weekly bird survey has run here for decades, and Eastside Audubon hosts events regularly.",
-    "snippet": "Redmond's giant county park hides a first-rate birding circuit along the Sammamish Slough: wet meadows, cottonwood groves, and a marsh boardwalk with about 250 species recorded. Ospreys nest on the light towers, eagles patrol the river, and the meadows are one of the most reliable places on the Eastside for savannah sparrows and, in summer, Lazuli Buntings. The long-running weekly survey means the bird life here is exceptionally well documented.",
-    "seasons": {
-      "spring": { "birds": ["Osprey", "Yellow Warbler", "Black-headed Grosbeak", "Rufous Hummingbird", "Common Yellowthroat"], "note": "Ospreys return to the nest platforms; the slough edges sing." },
-      "summer": { "birds": ["Lazuli Bunting", "Willow Flycatcher", "Cedar Waxwing", "Vaux's Swift", "American Kestrel"], "note": "Check the meadow snags for buntings and kestrels." },
-      "fall": { "birds": ["Golden-crowned Sparrow", "Lincoln's Sparrow", "Merlin", "Greater Yellowlegs"], "note": "Sparrow numbers surge along the Bird Loop." },
-      "winter": { "birds": ["Bald Eagle", "Northern Shrike", "Wilson's Snipe", "Green-winged Teal", "Short-eared Owl (some years)"], "note": "Open meadows attract shrikes and raptors." }
-    },
     "sources": [
-      { "title": "Eastside Audubon Society", "url": "https://www.eastsideaudubon.org/" },
-      { "title": "WTA: Bird Watching Hikes in Washington", "url": "https://www.wta.org/go-outside/seasonal-hikes/year-round-destinations/bird-watching-hikes-in-washington" },
-      { "title": "eBird hotspot", "url": "https://ebird.org/hotspot/L351484" }
+      {
+        "title": "Eastside Audubon Society",
+        "url": "https://www.eastsideaudubon.org/"
+      },
+      {
+        "title": "WTA: Bird Watching Hikes in Washington",
+        "url": "https://www.wta.org/go-outside/seasonal-hikes/year-round-destinations/bird-watching-hikes-in-washington"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L351484"
+      }
     ]
   },
   {
-    "slug": "edmonds-waterfront",
-    "name": "Edmonds Waterfront & Marsh",
-    "locId": "L374382",
-    "lat": 47.8119,
-    "lng": -122.3854,
-    "region": "North Sound",
-    "habitat": "Saltwater shoreline, fishing pier, saltmarsh",
-    "pass": "Free street and lot parking near the ferry terminal.",
-    "effort": {
-      "distance": "1 to 2 miles of flat strolling between the pier, beach, and marsh viewpoints",
-      "gain": "Flat",
-      "terrain": "Sidewalks, pier decking, and viewing platforms; fully accessible",
-      "rating": "Easy"
-    },
-    "bestTime": "Fall through spring is prime. The fishing pier is good at any tide; check the marsh at high tide.",
-    "snippet": "The easiest saltwater birding in the region: a public fishing pier that puts you directly over the water, with grebes, loons, and sea ducks often just yards away. Steps from the pier, Edmonds Marsh is one of the last urban saltmarshes on Puget Sound, with viewing platforms over the pickleweed. Between the two you can tally a serious list without ever really leaving town, and the ferry dock adds a bonus scan of the shipping lanes.",
-    "seasons": {
-      "spring": { "birds": ["Brant", "Caspian Tern", "Rhinoceros Auklet", "Purple Martin", "Yellow-rumped Warbler"], "note": "Brant linger into spring; martins arrive at the nest boxes." },
-      "summer": { "birds": ["Pigeon Guillemot", "Heermann's Gull", "Purple Martin", "Osprey", "Great Blue Heron"], "note": "Quietest season on the water, liveliest at the marsh." },
-      "fall": { "birds": ["Surf Scoter", "Common Murre", "Heermann's Gull", "Parasitic Jaeger (lucky days)", "Greater Yellowlegs"], "note": "Seabird numbers build fast from September." },
-      "winter": { "birds": ["Red-throated Loon", "Western Grebe", "Long-tailed Duck", "Harlequin Duck", "Black Turnstone", "Brant"], "note": "Peak season: the pier can be spectacular on calm winter mornings." }
-    },
-    "sources": [
-      { "title": "City of Edmonds", "url": "https://www.edmondswa.gov" },
-      { "title": "eBird hotspot: Edmonds Waterfront", "url": "https://ebird.org/hotspot/L374382" },
-      { "title": "eBird hotspot: Edmonds Marsh", "url": "https://ebird.org/hotspot/L374380" }
-    ]
-  },
-  {
-    "slug": "nisqually-nwr",
+    "slug": "billy-frank-jr-nisqually-nwr",
+    "order": 8,
     "name": "Billy Frank Jr. Nisqually NWR",
+    "region": "Olympia",
+    "habitat": "Estuary, boardwalk, freshwater ponds",
+    "effortLine": "Easy · 4 mi boardwalk",
+    "effortTier": "Easy",
+    "terrain": "Level gravel and a mile of boardwalk over the estuary.",
+    "when": "Time the tide: arrive two hours before high water for the shorebirds.",
+    "access": "$3 per vehicle (federal passes accepted). Visitor center and restrooms.",
+    "blurb": "The south Sound's great estuary, and the single most reliable stop on this list. The boardwalk carries you a mile out into the tideflats, which means you're standing in the middle of the birds rather than looking at them across a field.",
+    "lat": 47.073,
+    "lng": -122.709,
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Western Sandpiper",
+          "Cinnamon Teal",
+          "Purple Martin",
+          "Bald Eagle"
+        ],
+        "note": "Western Sandpipers stream through on the tide."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Osprey",
+          "Caspian Tern",
+          "Great Blue Heron",
+          "Willow Flycatcher"
+        ],
+        "note": "Osprey and terns work the estuary all day."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Dunlin",
+          "Long-billed Dowitcher",
+          "Peregrine Falcon",
+          "Northern Pintail"
+        ],
+        "note": "Dowitchers and dunlin in the thousands."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Cackling Goose",
+          "Green-winged Teal",
+          "Northern Harrier",
+          "Trumpeter Swan"
+        ],
+        "note": "Geese, swans, and pintail fill the freshwater ponds."
+      }
+    ],
     "locId": "L282253",
-    "lat": 47.0813,
-    "lng": -122.7181,
-    "region": "South Sound",
-    "habitat": "River delta, estuary, freshwater marsh, riparian forest",
-    "pass": "$3 per vehicle daily fee (federal passes accepted).",
-    "effort": {
-      "distance": "Twin Barns loop 1 mile; estuary boardwalk extends the walk to about 4 miles round trip",
-      "gain": "Flat",
-      "terrain": "Boardwalks and gravel dikes the entire way; largely accessible",
-      "rating": "Easy, but the full boardwalk is a long flat walk"
-    },
-    "bestTime": "Winter and migration are outstanding. Aim for a rising or high tide, which pushes birds close to the boardwalk. The last mile of boardwalk closes seasonally for hunting season, roughly October through January, so check refuge conditions.",
-    "snippet": "The premier birding destination in the South Sound: a restored river delta where the Nisqually meets saltwater, walked entirely on boardwalks and dikes. In winter the estuary hosts thousands of waterfowl, clouds of Dunlin twist over the flats with Peregrines in pursuit, and the riparian loop is thick with songbirds. With over 270 species recorded, a good day here can top 60 species without hurrying. Named for the Nisqually tribal leader who fought for the treaty fishing rights upheld in the Boldt decision.",
-    "seasons": {
-      "spring": { "birds": ["Western Sandpiper", "Dunlin", "Caspian Tern", "Yellow Warbler", "Cinnamon Teal", "Rufous Hummingbird"], "note": "Shorebird migration peaks late April to early May on the flats." },
-      "summer": { "birds": ["Osprey", "Willow Flycatcher", "Wood Duck", "Purple Martin", "Band-tailed Pigeon"], "note": "Quieter, but the riparian forest stays busy with breeders." },
-      "fall": { "birds": ["Greater Yellowlegs", "Long-billed Dowitcher", "American Pipit", "Peregrine Falcon", "Cackling Goose"], "note": "Waterfowl and raptors pour back in through October." },
-      "winter": { "birds": ["Dunlin", "American Wigeon", "Northern Pintail", "Bald Eagle", "Peregrine Falcon", "Short-eared Owl (some years)"], "note": "Peak spectacle: tens of thousands of ducks and geese on the delta." }
-    },
     "sources": [
-      { "title": "USFWS: Billy Frank Jr. Nisqually NWR", "url": "https://www.fws.gov/refuge/billy-frank-jr-nisqually" },
-      { "title": "Birds Connect Seattle", "url": "https://birdsconnectsea.org/get-involved/go-birding/" },
-      { "title": "eBird hotspot", "url": "https://ebird.org/hotspot/L282253" }
+      {
+        "title": "USFWS: Billy Frank Jr. Nisqually NWR",
+        "url": "https://www.fws.gov/refuge/billy-frank-jr-nisqually"
+      },
+      {
+        "title": "Birds Connect Seattle",
+        "url": "https://birdsconnectsea.org/get-involved/go-birding/"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L282253"
+      }
     ]
   },
   {
-    "slug": "crockett-lake",
-    "name": "Crockett Lake (Whidbey Island)",
-    "locId": "L109534",
-    "lat": 48.1667,
-    "lng": -122.65,
-    "region": "Whidbey Island",
-    "habitat": "Shallow brackish lagoon, wet pasture, beach",
-    "pass": "Free roadside viewing; Discover Pass needed if you park at adjacent Fort Casey State Park.",
-    "effort": {
-      "distance": "Roadside pullouts and short walks; as little or as much as you like",
-      "gain": "Flat",
-      "terrain": "Viewing is mostly from road shoulders and pullouts along Highway 20; a scope helps",
-      "rating": "Easy"
-    },
-    "bestTime": "July through September for shorebirds; winter for raptors. Combine with the Coupeville ferry ride and Fort Casey.",
-    "snippet": "A shallow lagoon beside the Coupeville ferry landing that is, acre for acre, the best shorebird spot in the Puget Sound region. In late summer the muddy edges swarm with sandpipers, plovers, and dowitchers, with falcons and harriers never far behind. It is drive-up birding: pull off the highway, set up a scope, and let the birds come to you. In winter the wet fields hold Short-eared Owls and rough legs of raptors working the grass.",
-    "seasons": {
-      "spring": { "birds": ["Black-bellied Plover", "Whimbrel", "Caspian Tern", "Northern Harrier", "Savannah Sparrow"], "note": "Northbound shorebirds pass through quickly." },
-      "summer": { "birds": ["Western Sandpiper", "Least Sandpiper", "Short-billed Dowitcher", "Semipalmated Plover", "Peregrine Falcon"], "note": "Fall shorebird migration starts by early July and is the main event." },
-      "fall": { "birds": ["Pectoral Sandpiper", "American Golden-Plover (rare)", "Merlin", "American Pipit", "Northern Harrier"], "note": "Rarity season; scan every flock." },
-      "winter": { "birds": ["Short-eared Owl", "Rough-legged Hawk", "Trumpeter Swan", "American Wigeon", "Bald Eagle"], "note": "Raptor central; dusk owl-watching over the fields." }
-    },
+    "slug": "discovery-park",
+    "order": 9,
+    "name": "Discovery Park",
+    "region": "Seattle",
+    "habitat": "Forest, bluff meadow, beach, saltwater",
+    "effortLine": "Moderate · 2.8 mi loop",
+    "effortTier": "Moderate",
+    "terrain": "Loop trail rolls; add 1.5 mi round trip and 200 ft of climb for West Point beach.",
+    "when": "Morning for songbirds, falling tide for the beach.",
+    "access": "Free. Three lots; the south lot is closest to the bluff.",
+    "blurb": "Five hundred acres of forest and bluff meadow with the Sound at the bottom of it — the widest habitat range of anywhere on this list. Budget the extra descent to West Point; the lighthouse beach is where the loons and alcids are.",
+    "lat": 47.658,
+    "lng": -122.4177,
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Rufous Hummingbird",
+          "Orange-crowned Warbler",
+          "Pigeon Guillemot",
+          "Caspian Tern"
+        ],
+        "note": "Migrants drop into the forest edges; terns return to the Sound."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Bald Eagle",
+          "Barn Owl",
+          "Cliff Swallow",
+          "Heermann’s Gull"
+        ],
+        "note": "Guillemots and auklets fish off West Point; martins use the snags."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Red-throated Loon",
+          "Parasitic Jaeger",
+          "Townsend’s Warbler",
+          "Sooty Shearwater (rare)"
+        ],
+        "note": "Seawatching picks up; sparrows flood the meadows."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Harlequin Duck",
+          "Marbled Murrelet",
+          "Snowy Owl (rare)",
+          "Brant"
+        ],
+        "note": "The best season at West Point: loons, grebes, and sea ducks close to shore."
+      }
+    ],
+    "locId": "L128530",
     "sources": [
-      { "title": "Whidbey Audubon Society", "url": "https://whidbeyaudubon.org" },
-      { "title": "WOS: Washington birding maps", "url": "https://wos.org/birding-resources/maps/" },
-      { "title": "eBird hotspot", "url": "https://ebird.org/hotspot/L109534" }
+      {
+        "title": "Seattle Parks: Discovery Park",
+        "url": "https://www.seattle.gov/parks/allparks/discovery-park"
+      },
+      {
+        "title": "BirdWeb (Birds Connect Seattle)",
+        "url": "https://www.birdweb.org"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L128530"
+      }
     ]
   },
   {
     "slug": "fort-ebey",
-    "name": "Fort Ebey State Park (Whidbey Island)",
-    "locId": "L773216",
+    "name": "Fort Ebey State Park",
+    "region": "Whidbey Island",
+    "habitat": "Coastal forest, bluff, kelp beds",
+    "effortLine": "Moderate · 2–5 mi rolling",
+    "effortTier": "Moderate",
+    "terrain": "Forest singletrack and bluff trail with modest ups and downs.",
+    "when": "Morning in the woods, afternoon seawatch from the bluff.",
+    "access": "Discover Pass required. Restrooms at the Gun Battery lot.",
+    "blurb": "A former coastal defense fort where dense woods meet a high bluff over the Strait. Owls and woodpeckers in the trees, and below the bluff a seawatch over kelp beds where scoters, loons, and auklets ride the tide rips. Pairs with Crockett Lake for a full Whidbey day.",
     "lat": 48.2217,
     "lng": -122.7631,
-    "region": "Whidbey Island",
-    "habitat": "Coastal forest, bluff, saltwater",
-    "pass": "Discover Pass required.",
-    "effort": {
-      "distance": "2 to 5 miles depending on route; 25 miles of trails in the park",
-      "gain": "Rolling, up to a few hundred feet",
-      "terrain": "Forest singletrack and bluff trails; some ups and downs",
-      "rating": "Moderate"
-    },
-    "bestTime": "Morning for forest birds; the bluff is a fine afternoon seawatch. WTA highlights the Old Gun Battery Trail for nesting owls.",
-    "snippet": "A former coastal defense fort on Whidbey's west side where dense forest meets a high bluff over the Strait of Juan de Fuca. The draw is variety with a view: owls and woodpeckers in the woods, kinglet and chickadee flocks along the trails, and from the bluff a raptor's-eye seawatch over kelp beds where scoters, loons, and auklets ride the tide rips. Combine it with Crockett Lake for a full Whidbey day.",
-    "seasons": {
-      "spring": { "birds": ["Great Horned Owl", "Olive-sided Flycatcher", "Rufous Hummingbird", "Pigeon Guillemot", "Orange-crowned Warbler"], "note": "Owlets fledge near the gun battery; forest song peaks." },
-      "summer": { "birds": ["Rhinoceros Auklet", "Pigeon Guillemot", "Swainson's Thrush", "Band-tailed Pigeon", "Common Nighthawk (evenings)"], "note": "Auklets feed in the rips below the bluff." },
-      "fall": { "birds": ["Surf Scoter", "Common Murre", "Red-necked Grebe", "Fox Sparrow", "Varied Thrush"], "note": "Seabirds stream past; thrushes return to the understory." },
-      "winter": { "birds": ["Long-tailed Duck", "Red-throated Loon", "Black Scoter", "Hutton's Vireo", "Golden-crowned Kinglet"], "note": "Quiet trails, busy water." }
-    },
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Great Horned Owl",
+          "Olive-sided Flycatcher",
+          "Rufous Hummingbird",
+          "Orange-crowned Warbler"
+        ],
+        "note": "Owlets fledge near the gun battery."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Rhinoceros Auklet",
+          "Pigeon Guillemot",
+          "Swainson's Thrush",
+          "Common Nighthawk"
+        ],
+        "note": "Auklets feed in the rips below the bluff."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Surf Scoter",
+          "Common Murre",
+          "Red-necked Grebe",
+          "Varied Thrush"
+        ],
+        "note": "Seabirds stream past the point."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Long-tailed Duck",
+          "Red-throated Loon",
+          "Black Scoter",
+          "Golden-crowned Kinglet"
+        ],
+        "note": "Quiet trails, busy water."
+      }
+    ],
+    "order": 10,
+    "locId": "L773216",
     "sources": [
-      { "title": "WA State Parks: Fort Ebey", "url": "https://parks.wa.gov/find-parks/state-parks/fort-ebey-state-park" },
-      { "title": "WTA: Bird Watching Hikes in Washington", "url": "https://www.wta.org/go-outside/seasonal-hikes/year-round-destinations/bird-watching-hikes-in-washington" },
-      { "title": "eBird hotspot", "url": "https://ebird.org/hotspot/L773216" }
+      {
+        "title": "WA State Parks: Fort Ebey",
+        "url": "https://parks.wa.gov/find-parks/state-parks/fort-ebey-state-park"
+      },
+      {
+        "title": "WTA: Bird Watching Hikes in Washington",
+        "url": "https://www.wta.org/go-outside/seasonal-hikes/year-round-destinations/bird-watching-hikes-in-washington"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L773216"
+      }
     ]
   },
   {
-    "slug": "dungeness-nwr",
-    "name": "Dungeness National Wildlife Refuge",
-    "locId": "L29690471",
-    "lat": 48.1463,
-    "lng": -123.1865,
-    "region": "Olympic Peninsula",
-    "habitat": "Sand spit, saltwater, bluff forest, lagoon",
-    "pass": "$3 per family daily fee (federal passes accepted).",
-    "effort": {
-      "distance": "Forest bluff loop under 1 mile; the spit is up to 11 miles round trip to the lighthouse",
-      "gain": "About 130 ft down to the spit and back up",
-      "terrain": "Easy forest trail, then soft sand and cobble on the spit; walking the spit is a genuine workout",
-      "rating": "Easy to strenuous, entirely up to you"
-    },
-    "bestTime": "Fall through spring for waterbirds. Walk the spit on a falling tide for firmer sand. Parts of the refuge close seasonally to protect wildlife.",
-    "snippet": "The longest natural sand spit in the country, curling five miles into the Strait of Juan de Fuca with a lagoon on one side and open water on the other. Even the short bluff trail delivers: Harlequin Ducks and Brant work the shallows, seabirds stream past offshore, and the protected lagoon shelters huge waterfowl rafts. Walking to the lighthouse is a full-day pilgrimage; birding just the first mile of spit is nearly as good. About 90 minutes from Seattle via the Edmonds ferry, and worth every one of them.",
-    "seasons": {
-      "spring": { "birds": ["Brant", "Harlequin Duck", "Rhinoceros Auklet", "Caspian Tern", "Black Oystercatcher"], "note": "Brant stage in the bay before flying north." },
-      "summer": { "birds": ["Pigeon Guillemot", "Black Oystercatcher", "Heermann's Gull", "Marbled Murrelet (offshore)", "Osprey"], "note": "Quieter, with nesting seabirds offshore; check refuge closures." },
-      "fall": { "birds": ["Black-bellied Plover", "Sanderling", "Common Murre", "Pacific Loon", "Northern Harrier"], "note": "Shorebirds on the spit tip; loons move south offshore." },
-      "winter": { "birds": ["Harlequin Duck", "Long-tailed Duck", "Black Scoter", "Red-breasted Merganser", "Dunlin", "Brant"], "note": "Peak waterbird season; the lagoon is packed." }
-    },
+    "slug": "spencer-island",
+    "order": 11,
+    "name": "Spencer Island",
+    "region": "Everett",
+    "habitat": "Dike loop, freshwater and tidal marsh",
+    "effortLine": "Moderate · 3.4 mi dike loop",
+    "effortTier": "Moderate",
+    "terrain": "Flat, exposed grass-and-gravel dike; 6.6 mi round trip from the lot via the Langus riverfront trail and the 1914 Jackknife Bridge. No shade, no water.",
+    "when": "Fall and winter. Bring a scope and something windproof.",
+    "access": "Free gravel lot at Langus Riverfront Park; walk in along the river. No dogs on the south (county) half.",
+    "blurb": "A working estuary in the Snohomish delta: dikes, sloughs, and a lot of sky. Raptor density in winter is the best in the county — harriers low over the grass, eagles by the dozen, and a decent chance at a shrike.",
+    "lat": 47.995,
+    "lng": -122.165,
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Yellow-headed Blackbird",
+          "American Bittern",
+          "Cinnamon Teal",
+          "Sora"
+        ],
+        "note": "Bitterns boom from the sloughs; teal pair off."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Virginia Rail",
+          "Marsh Wren",
+          "Purple Martin",
+          "Green Heron"
+        ],
+        "note": "Rails and wrens everywhere in the tidal marsh."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Wilson’s Snipe",
+          "Greater Yellowlegs",
+          "Merlin",
+          "American Pipit"
+        ],
+        "note": "Snipe and yellowlegs work the drawdown."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Northern Harrier",
+          "Rough-legged Hawk",
+          "Northern Shrike",
+          "Short-eared Owl"
+        ],
+        "note": "Raptor density peaks — harriers, rough-legs, shrikes."
+      }
+    ],
+    "locId": "L165807",
     "sources": [
-      { "title": "USFWS: Dungeness NWR", "url": "https://www.fws.gov/refuge/dungeness" },
-      { "title": "WTA: Bird Watching Hikes in Washington", "url": "https://www.wta.org/go-outside/seasonal-hikes/year-round-destinations/bird-watching-hikes-in-washington" },
-      { "title": "eBird hotspot", "url": "https://ebird.org/hotspot/L29690471" }
+      {
+        "title": "WTA: Spencer Island",
+        "url": "https://www.wta.org/go-hiking/hikes/spencer-island"
+      },
+      {
+        "title": "Snohomish County Parks",
+        "url": "https://snohomishcountywa.gov/280/Parks-Recreation"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L165807"
+      }
+    ]
+  },
+  {
+    "slug": "ebeys-landing",
+    "order": 12,
+    "name": "Ebey's Landing",
+    "region": "Whidbey Island",
+    "habitat": "Prairie bluff, lagoon, beach",
+    "effortLine": "Moderate · 5.6 mi bluff loop",
+    "effortTier": "Moderate",
+    "terrain": "Steady 260 ft climb to the bluff, then loose cobble on the beach return.",
+    "when": "Clear days for the raptor watch. Spring for the prairie.",
+    "access": "Free lot at the Prairie Overlook; the beach lot needs a Discover Pass. Ferry from Mukilteo.",
+    "blurb": "One of the best walks in the state that also happens to be excellent birding: historic prairie on the bluff top, the Strait wide open below, and a return along the beach past Perego's Lagoon. Come for the view and get the birds as a bonus.",
+    "lat": 48.198,
+    "lng": -122.705,
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Sky Lark (rare)",
+          "Savannah Sparrow",
+          "Rufous Hummingbird",
+          "Bald Eagle"
+        ],
+        "note": "Prairie birds return to the bluff top."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Pigeon Guillemot",
+          "Rhinoceros Auklet",
+          "Turkey Vulture",
+          "Barn Swallow"
+        ],
+        "note": "Alcids below the bluff; vultures riding the updraft."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Peregrine Falcon",
+          "Golden Eagle (rare)",
+          "Pacific Loon",
+          "Horned Lark"
+        ],
+        "note": "Falcon migration along the ridge line."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Short-eared Owl",
+          "Snowy Owl (rare)",
+          "Harlequin Duck",
+          "Brant"
+        ],
+        "note": "Short-eared owls hunt the prairie at dusk."
+      }
+    ],
+    "locId": "L233763",
+    "sources": [
+      {
+        "title": "NPS: Ebey's Landing National Historical Reserve",
+        "url": "https://www.nps.gov/ebla/index.htm"
+      },
+      {
+        "title": "WTA: Ebey's Landing",
+        "url": "https://www.wta.org/go-hiking/hikes/ebeys-landing"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L233763"
+      }
+    ]
+  },
+  {
+    "slug": "dungeness-spit",
+    "order": 13,
+    "name": "Dungeness Spit",
+    "region": "Sequim",
+    "habitat": "Sand spit, bluff forest, harbor",
+    "effortLine": "Strenuous · 11 mi round trip",
+    "effortTier": "Strenuous",
+    "terrain": "Half a mile of forest down to the beach, then five miles of soft sand and cobble each way.",
+    "when": "Falling tide, all day, and start early. Any season rewards it; winter is best for sea ducks.",
+    "access": "$3 per family/group, daily (federal passes accepted). Dungeness Recreation Area lot. No dogs.",
+    "blurb": "Five and a half miles of sand thrown out into the Strait of Juan de Fuca — the longest natural sand spit in the country, and a full day's commitment. Harbor on one side, open strait on the other, birds on both, and a lighthouse at the end to justify the walk back.",
+    "lat": 48.142,
+    "lng": -123.189,
+    "seasons": [
+      {
+        "season": "Spring",
+        "birds": [
+          "Brant",
+          "Caspian Tern",
+          "Whimbrel",
+          "Bonaparte’s Gull"
+        ],
+        "note": "Brant and whimbrel stage along the spit."
+      },
+      {
+        "season": "Summer",
+        "birds": [
+          "Rhinoceros Auklet",
+          "Pigeon Guillemot",
+          "Osprey",
+          "Heermann’s Gull"
+        ],
+        "note": "Auklets and guillemots in the strait."
+      },
+      {
+        "season": "Fall",
+        "birds": [
+          "Red-necked Grebe",
+          "Parasitic Jaeger",
+          "Sanderling",
+          "Pacific Loon"
+        ],
+        "note": "Jaegers and grebes from the outer spit."
+      },
+      {
+        "season": "Winter",
+        "birds": [
+          "Long-tailed Duck",
+          "Harlequin Duck",
+          "Ancient Murrelet",
+          "Black Scoter"
+        ],
+        "note": "Long-tailed and harlequin ducks in the harbor."
+      }
+    ],
+    "locId": "L29690471",
+    "sources": [
+      {
+        "title": "USFWS: Dungeness NWR",
+        "url": "https://www.fws.gov/refuge/dungeness"
+      },
+      {
+        "title": "WTA: Bird Watching Hikes in Washington",
+        "url": "https://www.wta.org/go-outside/seasonal-hikes/year-round-destinations/bird-watching-hikes-in-washington"
+      },
+      {
+        "title": "eBird hotspot",
+        "url": "https://ebird.org/hotspot/L29690471"
+      }
     ]
   }
 ]
